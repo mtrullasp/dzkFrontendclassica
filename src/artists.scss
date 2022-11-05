@@ -1,0 +1,3476 @@
+.hyperText {
+    div {
+       list-style: none;
+    }
+
+    li {
+        font-size: larger;
+        font-weight: 600;
+        line-height: 20pt;
+    }
+
+@font-face {
+    font-family: "PlutoSansCondMedium-Italic";
+    font-display: swap;
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_D_0.eot);
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_D_0.eot?#iefix) format("embedded-opentype"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_D_0.woff) format("woff"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_D_0.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "PlutoSansCondBold";
+    font-display: swap;
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_16_0.eot);
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_16_0.eot?#iefix) format("embedded-opentype"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_16_0.woff) format("woff"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_16_0.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "PlutoSansCondHeavy";
+    font-display: swap;
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_18_0.eot);
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_18_0.eot?#iefix) format("embedded-opentype"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_18_0.woff) format("woff"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_18_0.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "PlutoSansCondLight";
+    font-display: swap;
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_19_0.eot);
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_19_0.eot?#iefix) format("embedded-opentype"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_19_0.woff) format("woff"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_19_0.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "PlutoSansCondMedium";
+    font-display: swap;
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1A_0.eot);
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1A_0.eot?#iefix) format("embedded-opentype"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1A_0.woff) format("woff"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1A_0.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "PlutoSansCondRegular";
+    font-display: swap;
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1B_0.eot);
+    src: url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1B_0.eot?#iefix) format("embedded-opentype"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1B_unhinted_0.woff) format("woff"),
+    url(//cdn-gce.allmusic.com/webfonts/plutosans/25BEAD_1B_unhinted_0.ttf) format("truetype");
+}
+
+.tabs.classical .tab a {
+    padding: 15px 10px 13px 10px;
+}
+
+.tabs {
+    overflow: auto;
+    clear: left;
+    margin-bottom: 1px;
+}
+
+.tabs .tab:hover,
+.tabs.overview .overview,
+.tabs.user_reviews .user_reviews,
+.tabs.artists .artists,
+.tabs.albums .albums,
+.tabs.songs .tab.songs,
+.tabs.credits .credits,
+.tabs.releases .releases,
+.tabs.similar .similar,
+.tabs.biography .biography,
+.tabs.discography .discography,
+.tabs.song-highlights .songs,
+.tabs.all-songs .songs,
+.tabs.compositions .tab.compositions,
+.tabs.awards .awards,
+.tabs.related .tab.related,
+.tabs.variations .variations,
+.tabs.performed_by .performed_by,
+.tabs.lyrics .lyrics,
+.tabs.attributes .attributes {
+    border: 1px solid #229cce;
+    background-color: #25aae1;
+}
+
+.tabs .tab {
+    float: left;
+    margin-right: 1px;
+    border: 1px solid #5d5d5d;
+    background-color: #686868;
+}
+
+.tabs .tab a {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+    display: block;
+    height: 100%;
+    padding: 15px 13px 13px 13px;
+    font-family: PlutoSansCondBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.tabs .tab a:hover {
+    color: #ffffff;
+}
+
+.tabs .tab .arrow {
+    display: none;
+    float: right;
+}
+
+.tabs .tab.mobile {
+    display: none;
+}
+
+.tabs .tab-content.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .tabs {
+        overflow: hidden;
+    }
+
+    .tabs .tab {
+        border: 1px solid #229cce;
+        background-color: #25aae1;
+        width: 100%;
+        margin-bottom: 1px;
+    }
+
+    .tabs .tab .arrow {
+        display: inline-block;
+    }
+
+    .tabs .tab.overview {
+        display: none;
+    }
+
+    .tabs .tab.mobile {
+        display: block;
+    }
+
+    .tabs .tab a {
+        padding: 15px 17px 13px 8px;
+    }
+
+    .tabs .tab-content {
+        float: left;
+        width: 100%;
+        background-color: #ffffff;
+        margin-bottom: 1px;
+        margin-bottom: 0.5px;
+    }
+
+    .tabs .tab-content section {
+        display: block;
+    }
+
+    .tabs .tab-content.overview,
+    .tabs .tab-content.artists,
+    .tabs .tab-content.albums,
+    .tabs .tab-content.songs,
+    .tabs .tab-content.songs,
+    .tabs .tab-content.credits,
+    .tabs .tab-content.awards,
+    .tabs .tab-content.releases,
+    .tabs .tab-content.similar,
+    .tabs .tab-content.moods,
+    .tabs .tab-content.themes,
+    .tabs .tab-content.biography,
+    .tabs .tab-content.discography,
+    .tabs .tab-content.compositions,
+    .tabs .tab-content.variations,
+    .tabs .tab-content.performed_by,
+    .tabs .tab-content.lyrics {
+        background-color: #ffffff;
+        border: 0;
+    }
+
+    .tabs .tab-content.related {
+        background-color: #ededed;
+        border: 0;
+    }
+
+    .tabs .tab-content.awards {
+        background-color: #ededed;
+        border: 0;
+    }
+
+    .tabs .tab-content .overview,
+    .tabs .tab-content .artists,
+    .tabs .tab-content .albums,
+    .tabs .tab-content .songs,
+    .tabs .tab-content .song-highlights,
+    .tabs .tab-content .all-songs,
+    .tabs .tab-content .credits,
+    .tabs .tab-content .releases,
+    .tabs .tab-content .similar,
+    .tabs .tab-content .moods,
+    .tabs .tab-content .themes,
+    .tabs .tab-content .biography,
+    .tabs .tab-content .discography,
+    .tabs .tab-content .compositions,
+    .tabs .tab-content .variations,
+    .tabs .tab-content .performed_by,
+    .tabs .tab-content .lyrics {
+        background-color: #ffffff;
+        border: 0;
+    }
+
+    .tabs .tab-content.mobile {
+        display: block;
+    }
+
+    .tabs .tab-content.mobile.hidden {
+        display: none;
+    }
+
+    .tabs .tab.mobile:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+.sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    margin-right: 0px;
+    width: 320px;
+    float: right;
+    border-left: 18px solid transparent;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* html .sidebar {
+    overflow-x: hidden;
+}
+
+.sidebar > * {
+    float: left;
+    width: 100%;
+}
+
+.sidebar section,
+.sidebar .module,
+.sidebar > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+    background-color: #ffffff;
+}
+
+.sidebar section,
+.sidebar .module,
+.sidebar .advertising,
+.sidebar .promo,
+.sidebar .sidebar-promo {
+    margin-bottom: 20px;
+}
+
+.sidebar .promo a,
+.sidebar .sidebar-promo a {
+    overflow: auto;
+}
+
+.sidebar .promo img,
+.sidebar .sidebar-promo img {
+    float: left;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .overflow-container .sidebar {
+        width: 100%;
+        border: 0;
+    }
+
+    .overflow-container .sidebar .advertising,
+    .overflow-container .sidebar .sidebar-promo,
+    .overflow-container .sidebar .promo {
+        text-align: center;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .overflow-container .sidebar .advertising a,
+    .overflow-container .sidebar .sidebar-promo a,
+    .overflow-container .sidebar .promo a {
+        display: inline-block;
+    }
+
+    .overflow-container .sidebar .advertising.medium-rectangle,
+    .overflow-container .sidebar .advertising.medium-rectangle-btf {
+        margin-bottom: 20px;
+    }
+
+    .sidebar-promo {
+        margin-bottom: 20px;
+    }
+}
+
+.blog-entries {
+    margin-bottom: 20px;
+}
+
+.blog-entries h4 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 19px;
+    line-height: 1.9rem;
+    margin: 18px 0 8px 18px;
+    font-family: PlutoSansCondMedium, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+    text-align: left;
+    font-weight: normal;
+    color: #000;
+}
+
+.blog-entries ul {
+    margin: 0 18px 20px 18px;
+}
+
+.blog-entries ul li {
+    padding: 5px 0;
+}
+
+.blog-entries a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0e76bc;
+}
+
+.blog-entries a:hover {
+    color: #0089c1;
+}
+
+.artist-bio-container {
+    padding-bottom: 26px;
+    min-height: 54px;
+}
+
+.artist-bio-container .artist-sample-container,
+.artist-bio-container hgroup {
+    vertical-align: middle;
+}
+
+header .audio-player {
+    float: left;
+    margin: 5px 10px 12px 0;
+}
+
+hgroup {
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+hgroup .artist-name {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 21px;
+    line-height: 2.1rem;
+    margin: 0;
+    font-family: PlutoSansCondMedium, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+hgroup .artist-follow,
+hgroup .artist-follow > * {
+    margin: 0;
+    padding: 0;
+}
+
+hgroup .artist-follow {
+    width: 90px;
+    border-radius: 4px;
+    height: 16px;
+    position: relative;
+    float: left;
+    top: 4px;
+    background-color: #686868;
+    cursor: pointer;
+}
+
+hgroup .artist-follow:hover {
+    background-color: #cc3a00;
+}
+
+hgroup .artist-follow.following {
+    background-color: #cc3a00;
+}
+
+hgroup .artist-follow.following:hover {
+    background-color: #ff851b;
+}
+
+hgroup .artist-follow p {
+    color: black;
+    font-size: 1.05rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 2px;
+}
+
+hgroup .bio-author {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #b9b9b9;
+}
+
+header .biography {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+    padding: 16px 0 17px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #313131;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+header .biography a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: -12px;
+    color: #00c3ff;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .artist-bio-container {
+        padding-bottom: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header hgroup,
+    header .biography {
+        text-align: left;
+    }
+
+    header hgroup {
+        min-height: 0;
+        padding-top: 38px;
+        padding-bottom: 10px;
+        border-bottom: 0;
+    }
+
+    header .artist-follow {
+        float: none;
+        margin-top: 4px;
+        position: static;
+    }
+
+    header .biography {
+        padding: 0;
+        border: 0;
+    }
+
+    header .biography a {
+        display: none;
+    }
+
+    header .audio-player {
+        display: none;
+    }
+
+    header .artist-radio {
+        display: none;
+    }
+
+    header .artist-radio a {
+        display: none;
+    }
+}
+
+section.corrections {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section.corrections label {
+    font-weight: bold;
+    color: #000;
+}
+
+section.corrections .birth,
+section.corrections .death,
+section.corrections .your-name,
+section.corrections .email {
+    float: left;
+    width: 50%;
+}
+
+section.corrections .birth input,
+section.corrections .your-name input {
+    width: 90%;
+}
+
+section.corrections .your-name,
+section.corrections .email {
+    margin-top: 0;
+}
+
+section.corrections input,
+section.corrections textarea {
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid #e3e3e3;
+}
+
+section.corrections input {
+    height: 30px;
+}
+
+section.corrections textarea {
+    height: 117px;
+}
+
+section.corrections p.submit {
+    text-align: right;
+}
+
+section.corrections .button {
+    width: auto;
+    height: auto;
+    margin-right: -5px;
+}
+
+.content {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.content a {
+    color: #0e76bc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: #0089c1;
+}
+
+.content section {
+    padding: 40px;
+    border: 0;
+    margin-bottom: 18px;
+    background-color: #ffffff;
+}
+
+.content section .headline {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+    height: 23px;
+    overflow: visible;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 0 0 20px 0;
+    font-family: PlutoSansCondMedium, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+    font-weight: normal;
+    color: #000;
+}
+
+.content section .headline h1,
+.content section .headline h2,
+.content section .headline h3,
+.content section .headline h4,
+.content section .headline h5,
+.content section .headline h6 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+    float: left;
+    margin: 0;
+    font-weight: normal;
+}
+
+.content section .headline .note {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #b9bcbc;
+}
+
+.content section table {
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+}
+
+.content section table thead tr {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 29px;
+    line-height: 2.9rem;
+    color: #000;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+}
+
+.content section table thead tr th {
+    margin: 0;
+}
+
+.content section table thead tr a {
+    text-decoration: none;
+    color: #000;
+}
+
+.content section table thead tr a:hover {
+    color: #0089c1;
+}
+
+.content section table tbody tr {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.content section table tbody tr a {
+    text-decoration: none;
+    color: #0e76bc;
+}
+
+.content section table tbody tr a:hover {
+    color: #0089c1;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .overflow-container .content-container {
+        /*overflow: hidden;*/
+    }
+
+    .content {
+        background: #000000;
+    }
+
+    .content > section {
+        display: none;
+    }
+
+    .content .tab-content section {
+        margin-bottom: 0;
+    }
+
+    .content header {
+        background: #000000;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 96%;
+    }
+
+    .sidebar > section {
+        display: none;
+    }
+
+    .artist-image .credit {
+        font-size: 10px;
+        font-size: 1rem;
+        line-height: 18px;
+        line-height: 1.8rem;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: center;
+        color: #ffffff;
+        background-color: #000000;
+    }
+
+    .advertising.medium-rectangle,
+    .advertising.medium-rectangle-btf {
+        background: #000000;
+        border: 0;
+        margin: 20px 0;
+    }
+}
+
+.content section.album-highlights {
+    overflow: auto;
+    padding: 38px;
+}
+
+.content section.album-highlights > a {
+    float: right;
+    margin-top: 18px;
+    padding-right: 2px;
+}
+
+.content section.album-highlights li {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 186.33333px;
+    height: 186.33333px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+.content section.album-highlights li > a {
+    display: block;
+}
+
+.content section.album-highlights li .cropped-image {
+    width: 187.33333px;
+    height: 187.33333px;
+}
+
+.content section.album-highlights li .cropped-image img {
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.content section.album-highlights li .info {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    padding: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.content section.album-highlights li .info a {
+    color: #ffffff;
+}
+
+.content section.album-highlights li .info .artist {
+    color: #ffffff;
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 13px;
+    line-height: 1.3rem;
+}
+
+.content section.album-highlights li .info .artist a {
+    font-weight: normal;
+}
+
+.content section.album-highlights li .info .title {
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 13px;
+    line-height: 1.3rem;
+}
+
+.content section.album-highlights li:hover {
+    cursor: pointer;
+}
+
+.content section.album-highlights li:hover .info {
+    background-color: #046380;
+    background-color: rgba(4, 99, 128, 0.75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)";
+}
+
+section.composition-highlights {
+    overflow: auto;
+}
+
+section.composition-highlights .headline {
+    margin-bottom: 0;
+}
+
+section.composition-highlights table thead td,
+section.composition-highlights table tbody td {
+    padding: 10px 0 10px 0;
+}
+
+section.composition-highlights table thead .title,
+section.composition-highlights table tbody .title {
+    width: 60%;
+    padding-right: 5%;
+}
+
+section.composition-highlights table thead .composition-date,
+section.composition-highlights table tbody .composition-date {
+    width: 9%;
+}
+
+section.composition-highlights table thead .average-duration,
+section.composition-highlights table tbody .average-duration {
+    width: 16%;
+    text-align: center;
+}
+
+section.composition-highlights table thead .genres,
+section.composition-highlights table tbody .genres {
+    width: 10%;
+}
+
+section.composition-highlights > a {
+    float: right;
+    margin-top: 18px;
+}
+
+.content section.related-artists {
+    overflow: auto;
+    padding: 38px;
+}
+
+.content section.related-artists > a {
+    float: right;
+    margin-top: 18px;
+    padding-right: 2px;
+}
+
+.content section.related-artists ul {
+    overflow: auto;
+}
+
+.content section.related-artists li {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 186.33333px;
+    height: 186.33333px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+.content section.related-artists li a {
+    overflow: hidden;
+    display: block;
+}
+
+.content section.related-artists li img {
+    max-width: none;
+}
+
+.content section.related-artists li .info {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.content section.related-artists li .info a {
+    color: #ffffff;
+}
+
+.content section.related-artists li .info .relation {
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 13px;
+    line-height: 1.3rem;
+    color: #ffffff;
+}
+
+.content section.related-artists li .info .artist {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+}
+
+.content section.related-artists li:hover .info {
+    background-color: #046380;
+    background-color: rgba(4, 99, 128, 0.75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)";
+}
+
+section.moods ul {
+    overflow: auto;
+}
+
+section.moods li {
+    float: left;
+    width: 25%;
+}
+
+section.moods li a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    section.moods {
+        padding: 18px 10px 38px 10px;
+    }
+
+    section.moods ul li {
+        width: 50%;
+    }
+}
+
+section.themes ul {
+    overflow: auto;
+}
+
+section.themes li {
+    float: left;
+    width: 25%;
+}
+
+section.themes li a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    section.themes {
+        padding: 18px 10px 38px 10px;
+    }
+
+    section.themes ul li {
+        width: 50%;
+    }
+}
+
+section.biography .headline {
+    margin-bottom: 0;
+}
+
+section.biography .text {
+    overflow: auto;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 20px;
+    line-height: 2rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section.biography .text .inline-image.odd {
+    padding: 5px 0 15px 25px;
+}
+
+section.biography .text .inline-image.even {
+    padding: 5px 25px 15px 0;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    section.biography {
+        padding: 20px 10px 28px 10px;
+    }
+
+    section.biography .text .inline-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    section.biography .text .inline-image .crop-image-borders {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    section.biography .text .inline-image .crop-image-borders img {
+        width: 130px;
+        height: 130px;
+    }
+
+    section.biography .text .inline-image.odd {
+        padding: 5px 0 5px 10px;
+    }
+
+    section.biography .text .inline-image.even {
+        padding: 5px 10px 5px 0;
+    }
+}
+
+/*
+.full-condensed-sprite,.content section.discography nav.view-type .full,.content section.discography nav.view-type .full:hover,.content section.discography nav.view-type .full.active,.content section.discography nav.view-type .condensed,.content section.discography nav.view-type .condensed:hover,.content section.discography nav.view-type .condensed.active {
+    background: url('/images/global/full-condensed-sfb92f106ea.png') no-repeat
+}
+*/
+
+.content section.discography {
+    padding: 40px 0 40px 0;
+}
+
+.content section.discography .headline {
+    width: 558px;
+    margin: 0 40px 0 40px;
+}
+
+.content section.discography nav.view-type {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 31px;
+    line-height: 3.1rem;
+    width: 558px;
+    margin: 0 40px 0 40px;
+}
+
+.content section.discography nav.view-type .full {
+    background-position: 0 0;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 11px;
+    line-height: 1.1rem;
+    display: inline-block;
+    height: 11px;
+    padding-left: 16px;
+    margin-right: 20px;
+    font-weight: normal;
+    color: #000;
+}
+
+.content section.discography nav.view-type .full:hover {
+    cursor: pointer;
+    color: #0089c1;
+}
+
+.content section.discography nav.view-type .full:hover,
+.content section.discography nav.view-type .full.active {
+    background-position: 0 -11px;
+}
+
+.content section.discography nav.view-type .condensed {
+    background-position: 0 -55px;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 11px;
+    line-height: 1.1rem;
+    display: inline-block;
+    height: 11px;
+    padding-left: 16px;
+    font-weight: normal;
+    color: #000;
+}
+
+.content section.discography nav.view-type .condensed:hover {
+    cursor: pointer;
+    color: #0089c1;
+}
+
+.content section.discography nav.view-type .condensed:hover,
+.content section.discography nav.view-type .condensed.active {
+    background-position: 0 -22px;
+}
+
+.content section.discography nav.view-type .editors-pick {
+    float: right;
+    font-weight: bold;
+    color: #b9bcbc;
+}
+
+.content section.discography .release-types {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    width: 548px;
+    margin: 0 40px 0 40px;
+    padding: 10px 0 10px 10px;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: #e7e7e7;
+}
+
+.content section.discography .release-types h3 {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    margin-top: 0;
+    color: #000;
+}
+
+.content section.discography .release-types label {
+    margin-left: 3px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.content section.discography .release-types label a {
+    color: #000000;
+}
+
+.content section.discography .release-types label a:hover {
+    color: #0089c1;
+}
+
+.content section.discography .release-types .all {
+    margin-right: 0;
+}
+
+.content section.discography .release-types input {
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+}
+
+.content section.discography table {
+    table-layout: fixed;
+}
+
+.content section.discography table .sortable a {
+    padding-right: 7px;
+}
+
+.content section.discography table thead th.label a {
+    font-weight: bold;
+}
+
+.content section.discography table thead .pick-prefix,
+.content section.discography table tbody .pick-prefix {
+    width: 37px;
+}
+
+.content section.discography table thead .cover,
+.content section.discography table tbody .cover {
+    width: 55px;
+    padding: 10px 9px 10px 0;
+}
+
+.content section.discography table thead .year,
+.content section.discography table tbody .year {
+    width: 44px;
+}
+
+.content section.discography table thead .title,
+.content section.discography table tbody .title {
+    width: auto;
+    padding-right: 12px;
+}
+
+.content section.discography table thead .title img,
+.content section.discography table tbody .title img {
+    vertical-align: middle;
+}
+
+.content section.discography table thead .label,
+.content section.discography table tbody .label {
+    word-wrap: break-word;
+    width: 77px;
+    padding-right: 12px;
+}
+
+.content section.discography table thead .label a,
+.content section.discography table tbody .label a {
+    font-weight: normal;
+    color: black;
+}
+
+.content section.discography table thead .label a:hover,
+.content section.discography table tbody .label a:hover {
+    color: #0e76bc;
+}
+
+.content section.discography table thead .all-rating,
+.content section.discography table tbody .all-rating {
+    width: 110px;
+    padding-right: 4px;
+}
+
+.content section.discography table thead .avg-rating,
+.content section.discography table tbody .avg-rating {
+    width: 93px;
+}
+
+.content section.discography table thead .pick-suffix,
+.content section.discography table tbody .pick-suffix {
+    width: 38px;
+}
+
+.content section.discography table thead tr {
+    border-bottom: 0;
+}
+
+.content section.discography table thead tr th {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.content section.discography table thead tr th.pick-prefix,
+.content section.discography table thead tr th.pick-suffix {
+    border-bottom: 0;
+}
+
+.content section.discography table tbody .cover .desktop-only {
+    display: block;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    font-weight: bold;
+    color: #b9bcbc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content section.discography table tbody .cover .mobile-only {
+    display: none;
+}
+
+.content section.discography table tbody .year,
+.content section.discography table tbody .title,
+.content section.discography table tbody .label,
+.content section.discography table tbody .all-rating,
+.content section.discography table tbody .avg-rating {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content section.discography table tbody .avg-rating .user-rating-block {
+    position: relative;
+    top: 8px;
+    text-align: center;
+}
+
+.content
+section.discography
+table
+tbody
+.avg-rating
+.average-user-rating-count {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.content section.discography table tbody tr {
+    border-bottom: 0;
+}
+
+.content section.discography table tbody tr td {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.content section.discography table tbody tr td.pick-prefix,
+.content section.discography table tbody tr td.pick-suffix {
+    border-bottom: 0;
+}
+
+.content section.discography table tbody tr td.cover a {
+    display: block;
+}
+
+.content section.discography table tbody tr.pick td.pick-prefix {
+    background-image: url(//cdn-gce.allmusic.com/images/row_pick.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .content section.discography table tbody tr.pick td.pick-prefix {
+        background-image: url(//cdn-gce.allmusic.com/images/row_pick@2x.png);
+        background-size: 34px 52px;
+    }
+}
+
+.content section.discography table tbody tr.pick td.pick-prefix,
+.content section.discography table tbody tr.pick td.pick-suffix {
+    border-bottom: 1px solid #e9f6fc;
+    border-top: 1px solid #e9f6fc;
+}
+
+.content section.discography table.condensed tbody .pick-prefix,
+.content section.discography table.condensed thead .pick-prefix {
+    width: 28px;
+}
+
+.content section.discography table.condensed tbody .pick-suffix,
+.content section.discography table.condensed thead .pick-suffix {
+    width: 28px;
+}
+
+.content section.discography table.condensed tbody .cover,
+.content section.discography table.condensed thead .cover {
+    display: none;
+}
+
+.content section.discography table.condensed tbody .label,
+.content section.discography table.condensed thead .label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content section.discography table.condensed tbody th.label a,
+.content section.discography table.condensed thead th.label a {
+    font-weight: bold;
+}
+
+.content section.discography table.condensed tbody td.label a,
+.content section.discography table.condensed thead td.label a {
+    font-weight: normal;
+}
+
+.content section.discography table.condensed tbody .title,
+.content section.discography table.condensed thead .title {
+    width: 151px;
+}
+
+.content section.discography table.condensed tbody td.title a:first-child,
+.content section.discography table.condensed thead td.title a:first-child {
+    max-width: 158px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.content section.discography table.condensed tbody td.title a img,
+.content section.discography table.condensed thead td.title a img {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.content section.discography table.condensed tbody .label,
+.content section.discography table.condensed thead .label {
+    width: 64px;
+    max-width: 75px;
+}
+
+.content section.discography table.condensed tbody .all-rating,
+.content section.discography table.condensed thead .all-rating {
+    width: 100px;
+}
+
+.content section.discography table.condensed tbody .avg-rating,
+.content section.discography table.condensed thead .avg-rating {
+    width: 82px;
+    padding: 0;
+}
+
+.content
+section.discography
+table.condensed
+tbody
+.avg-rating
+.user-rating-block,
+.content
+section.discography
+table.condensed
+thead
+.avg-rating
+.user-rating-block {
+    top: 0px;
+}
+
+.content
+section.discography
+table.condensed
+tbody
+.avg-rating
+.avg-rating-count,
+.content
+section.discography
+table.condensed
+thead
+.avg-rating
+.avg-rating-count {
+    display: none;
+}
+
+.content section.discography table.condensed tbody .title,
+.content section.discography table.condensed tbody .label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width: 569px) {
+    section.discography table.condensed tbody .year {
+        width: 45px;
+    }
+
+    section.discography table.condensed tbody .title {
+        max-width: 175px;
+        width: 175px;
+    }
+
+    section.discography table.condensed tbody .label {
+        width: 75px;
+    }
+
+    section.discography table.condensed tbody .all-rating {
+        width: 113px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .content section.discography {
+        padding: 10px 0 30px;
+    }
+
+    .content section.discography .view-type {
+        display: none;
+    }
+
+    .content section.discography .release-types {
+        width: auto;
+        margin: 0;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .content section.discography .release-types .discography-filter-mobile {
+        float: right;
+        width: 65%;
+        max-width: 135px;
+        margin: -3px 10px 0 10px;
+    }
+}
+
+section.song-highlights,
+section.all-songs {
+    position: relative;
+}
+
+section.song-highlights .headline,
+section.all-songs .headline {
+    margin-bottom: 0;
+}
+
+section.song-highlights .editors-pick,
+section.all-songs .editors-pick {
+    text-align: right;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #b9bcbc;
+}
+
+section.song-highlights .pagination-info .song-toggle,
+section.all-songs .pagination-info .song-toggle {
+    position: absolute;
+    right: 0;
+    padding-right: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    font-weight: bold;
+}
+
+section.song-highlights .pagination-info .song-toggle .label-song-highlights,
+section.all-songs .pagination-info .song-toggle .label-song-highlights {
+    padding-right: 15px;
+}
+
+section.song-highlights .pagination-info .song-toggle input,
+section.all-songs .pagination-info .song-toggle input {
+    cursor: pointer;
+}
+
+section.song-highlights .pagination-info .song-toggle label,
+section.all-songs .pagination-info .song-toggle label {
+    cursor: pointer;
+}
+
+section.song-highlights .pagination,
+section.all-songs .pagination {
+    margin: 0;
+    padding: 15px 0;
+}
+
+section.song-highlights .pagination:last-child,
+section.all-songs .pagination:last-child {
+    padding-bottom: 0px;
+    margin-bottom: -15px;
+}
+
+section.song-highlights table thead .alpha-filter-top,
+section.all-songs table thead .alpha-filter-top {
+    float: right;
+}
+
+section.song-highlights table thead .alpha-filter-top span,
+section.all-songs table thead .alpha-filter-top span {
+    margin-right: 3px;
+    color: #b9b9b9;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+}
+
+section.song-highlights table thead .alpha-filter-top span a,
+section.all-songs table thead .alpha-filter-top span a {
+    color: #0e76bc;
+}
+
+section.song-highlights table thead .alpha-filter-top span .active-alpha,
+section.all-songs table thead .alpha-filter-top span .active-alpha {
+    color: #000000;
+}
+
+section.song-highlights table tbody .title-composer,
+section.all-songs table tbody .title-composer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section.song-highlights table tbody .stream,
+section.all-songs table tbody .stream {
+    width: 70px;
+    text-align: right;
+}
+
+section.song-highlights table tbody .stream li,
+section.all-songs table tbody .stream li {
+    overflow: hidden;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+section.song-highlights table tbody .stream li a,
+section.all-songs table tbody .stream li a {
+    text-indent: 999999px;
+    color: transparent;
+}
+
+section.song-highlights table tbody .stream li.rdio,
+section.all-songs table tbody .stream li.rdio {
+    width: 16px;
+    height: 14px;
+    margin: 0 2px;
+}
+
+section.song-highlights table tbody .stream li:first-child,
+section.all-songs table tbody .stream li:first-child {
+    margin-left: 0;
+}
+
+section.song-highlights table tbody .stream .empty,
+section.all-songs table tbody .stream .empty {
+    background-image: none;
+    cursor: default;
+}
+
+section.song-highlights table tbody .stream .empty:hover,
+section.all-songs table tbody .stream .empty:hover {
+    background-image: none;
+}
+
+section.song-highlights table tbody .composer a,
+section.all-songs table tbody .composer a {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+    font-weight: normal;
+    color: #000000;
+}
+
+section.song-highlights .alpha-filter-bottom,
+section.all-songs .alpha-filter-bottom {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+section.song-highlights .alpha-filter-bottom span,
+section.all-songs .alpha-filter-bottom span {
+    margin-right: 3px;
+    color: #b9b9b9;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+}
+
+section.song-highlights .alpha-filter-bottom span a,
+section.all-songs .alpha-filter-bottom span a {
+    color: #0e76bc;
+}
+
+section.song-highlights .alpha-filter-bottom span .active-alpha,
+section.all-songs .alpha-filter-bottom span .active-alpha {
+    color: #000000;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .tab-content.songs section {
+        padding: 18px 10px 38px 10px;
+    }
+
+    .tab-content.songs section .headline {
+        width: auto;
+    }
+
+    .tab-content.songs section .pagination-info {
+        width: auto;
+        position: relative;
+        text-align: left;
+        top: auto;
+        left: auto;
+        padding: 10px 0 10px 0;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    .tab-content.songs section .pagination-info .song-toggle {
+        position: relative;
+        right: auto;
+        padding-right: 0;
+    }
+
+    .tab-content.songs section .pagination-info .alpha-filter-dropdown {
+        float: right;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .tab-content.songs section .pagination-info .alpha-filter-dropdown select {
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    .tab-content.songs section .page-numbering,
+    .tab-content.songs section .alpha-filter-top,
+    .tab-content.songs section .alpha-filter-bottom {
+        display: none;
+    }
+
+    .tab-content.songs section thead {
+        position: absolute;
+        top: 12px;
+        right: 2.5%;
+    }
+
+    .tab-content.songs section thead tr {
+        border: 0;
+    }
+
+    .tab-content.songs section thead .title-composer {
+        overflow: hidden;
+        text-indent: 999999px;
+        color: transparent;
+    }
+}
+
+.content .billboard-albums .headline,
+.content .billboard-singles .headline,
+.content .grammy-awards .headline,
+.content .allmusic-awards .headline {
+    margin: 0;
+}
+
+.content .billboard-albums table thead .peak,
+.content .billboard-singles table thead .peak,
+.content .grammy-awards table thead .peak,
+.content .allmusic-awards table thead .peak {
+    text-align: right;
+}
+
+.content .billboard-albums table tbody tr,
+.content .billboard-singles table tbody tr,
+.content .grammy-awards table tbody tr,
+.content .allmusic-awards table tbody tr {
+    height: 30px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+}
+
+.content .billboard-albums table tbody tr td,
+.content .billboard-singles table tbody tr td,
+.content .grammy-awards table tbody tr td,
+.content .allmusic-awards table tbody tr td {
+    padding: 10px 0 10px;
+}
+
+.content .billboard-albums table tbody tr td.peak,
+.content .billboard-singles table tbody tr td.peak,
+.content .grammy-awards table tbody tr td.peak,
+.content .allmusic-awards table tbody tr td.peak {
+    text-align: center;
+}
+
+.content .billboard-albums table tbody tr .year,
+.content .billboard-singles table tbody tr .year,
+.content .grammy-awards table tbody tr .year,
+.content .allmusic-awards table tbody tr .year {
+    width: 53px;
+}
+
+.content .billboard-albums table tbody tr .album,
+.content .billboard-albums table tbody tr .single,
+.content .billboard-singles table tbody tr .album,
+.content .billboard-singles table tbody tr .single,
+.content .grammy-awards table tbody tr .album,
+.content .grammy-awards table tbody tr .single,
+.content .allmusic-awards table tbody tr .album,
+.content .allmusic-awards table tbody tr .single {
+    width: 241px;
+    padding-right: 30px;
+}
+
+.content .billboard-albums table tbody tr .chart-name,
+.content .billboard-singles table tbody tr .chart-name,
+.content .grammy-awards table tbody tr .chart-name,
+.content .allmusic-awards table tbody tr .chart-name {
+    width: 200px;
+}
+
+.content .billboard-albums table tbody tr .peak,
+.content .billboard-singles table tbody tr .peak,
+.content .grammy-awards table tbody tr .peak,
+.content .allmusic-awards table tbody tr .peak {
+    width: 53px;
+}
+
+.grammy-awards table .year,
+.allmusic-awards table .year {
+    width: 50px;
+}
+
+.grammy-awards table .type,
+.allmusic-awards table .type {
+    width: 27px;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .tab-content.awards.mobile {
+        background-color: #ffffff;
+    }
+
+    .tab-content.awards.mobile section {
+        padding: 10px 0 30px;
+        margin: 0;
+        border: 0;
+        border-bottom: 0;
+        border-top: 1px solid #e3e3e3;
+    }
+
+    .tab-content.awards.mobile section table thead .peak {
+        text-align: center;
+    }
+
+    .tab-content.awards.mobile section:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .tab-content.awards.mobile section.grammy-awards thead .year,
+    .tab-content.awards.mobile section.grammy-awards tbody .year,
+    .tab-content.awards.mobile section.allmusic-awards thead .year,
+    .tab-content.awards.mobile section.allmusic-awards tbody .year {
+        width: 10%;
+    }
+
+    .tab-content.awards.mobile section.grammy-awards thead .title,
+    .tab-content.awards.mobile section.grammy-awards thead .award,
+    .tab-content.awards.mobile section.grammy-awards tbody .title,
+    .tab-content.awards.mobile section.grammy-awards tbody .award,
+    .tab-content.awards.mobile section.allmusic-awards thead .title,
+    .tab-content.awards.mobile section.allmusic-awards thead .award,
+    .tab-content.awards.mobile section.allmusic-awards tbody .title,
+    .tab-content.awards.mobile section.allmusic-awards tbody .award {
+        width: 40%;
+    }
+
+    .tab-content.awards.mobile section.billboard-singles table {
+        table-layout: fixed;
+    }
+
+    .tab-content.awards.mobile section.billboard-singles table thead .year {
+        width: 16%;
+    }
+
+    .tab-content.awards.mobile section.billboard-singles table thead .single {
+        width: 53%;
+    }
+
+    .tab-content.awards.mobile section.billboard-singles table thead .peak {
+        width: 14%;
+    }
+}
+
+section.related ul {
+    overflow: auto;
+}
+
+section.related li {
+    float: left;
+    width: 50%;
+    margin: 5px 0;
+}
+
+section.related li a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .tabs .tab-content.mobile.related {
+        padding: 0;
+    }
+
+    .tabs .tab-content.mobile.related section {
+        padding: 18px 10px 38px 10px;
+        margin-bottom: 20px;
+    }
+
+    .tabs .tab-content.mobile.related section .headline {
+        margin: 0 0 5px 0;
+    }
+
+    .tabs .tab-content.mobile.related section:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .tab .tab-content.mobile.compositions {
+        margin-bottom: 20px;
+    }
+}
+
+section.videos {
+    padding: 38px;
+}
+
+section.videos ul {
+    overflow: auto;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 15px;
+}
+
+section.videos li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 186.33333px;
+    margin-right: 1px;
+}
+
+section.videos li .video-info {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+section.videos .video-photo-link {
+    height: 104px;
+}
+
+section.videos .video-photo-link img {
+    width: auto !important;
+    min-width: 187.33333px;
+    max-width: 250px;
+    min-height: 104.74552px;
+    max-height: 150px;
+}
+
+section.videos .video-play-button {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 185px;
+    height: 104px;
+    text-indent: -999999px;
+    color: transparent;
+    background-image: url(//cdn-gce.allmusic.com/images/artist/video_play_button.png);
+}
+
+section.videos .no-video-image {
+    height: 104px;
+    background: #d3eef9;
+}
+
+section.videos .featured-video h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 21px;
+    line-height: 2.1rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e3e3e3;
+    font-family: PlutoSansCondRegular, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+    font-weight: normal;
+}
+
+section.videos .featured-video h3 span {
+    font-family: PlutoSansCondMedium, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+    color: #000;
+}
+
+section.videos .featured-video h3 span a {
+    font-family: PlutoSansCondMedium, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+    font-weight: normal;
+    color: #000;
+}
+
+section.videos .more-videos h4 {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+section.videos .more-videos ul {
+    overflow: auto;
+}
+
+section.videos .more-videos li {
+    float: left;
+    width: 46%;
+    margin-right: 4%;
+}
+
+section.videos .more-videos li a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+}
+
+section.videos .more-videos li:first-child {
+    background-color: #e9f6fc;
+}
+
+section.videos .more-videos li:first-child a {
+    color: #000;
+}
+
+section.compositions {
+    overflow: auto;
+}
+
+section.compositions .headline {
+    margin-bottom: 0;
+}
+
+section.compositions table {
+    table-layout: fixed;
+}
+
+section.compositions table thead .year,
+section.compositions table tbody .year {
+    width: 8%;
+}
+
+section.compositions table thead .title,
+section.compositions table tbody .title {
+    width: 40%;
+    padding-right: 10px;
+}
+
+section.compositions table thead .title img,
+section.compositions table tbody .title img {
+    vertical-align: middle;
+}
+
+section.compositions table thead .avg,
+section.compositions table tbody .avg {
+    width: 10%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+section.compositions table thead .genre,
+section.compositions table tbody .genre {
+    width: 22%;
+    padding-right: 2%;
+}
+
+section.compositions table thead .work-type,
+section.compositions table tbody .work-type {
+    width: 20%;
+}
+
+section.compositions table thead .genre .genre-filter {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+    width: 100%;
+}
+
+section.compositions table thead .work-type .work-filter {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+    width: 100%;
+}
+
+section.compositions table tbody td {
+    padding: 10px 0 10px 0;
+}
+
+section.compositions > a {
+    float: right;
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    section.compositions {
+        padding: 5px 10px 38px 10px;
+    }
+
+    section.compositions table tr td .year,
+    section.compositions table tr td .title,
+    section.compositions table tr td .genre,
+    section.compositions table tr td .work-type,
+    section.compositions table tr td .avg {
+        width: 100%;
+        padding-right: 0;
+        text-align: inherit;
+    }
+}
+
+section.credits {
+    position: relative;
+}
+
+section.credits .headline {
+    margin: 0;
+}
+
+section.credits table thead .year,
+section.credits table tbody .year {
+    width: 10%;
+}
+
+section.credits table thead .album,
+section.credits table tbody .album {
+    width: 34%;
+    padding-right: 4%;
+}
+
+section.credits table thead .artist,
+section.credits table tbody .artist {
+    width: 36%;
+    padding-right: 4%;
+}
+
+section.credits table thead .credit,
+section.credits table tbody .credit {
+    width: 20%;
+}
+
+section.credits table thead .credit .credit-filter {
+    width: 125px;
+}
+
+section.credits table tbody td {
+    padding: 10px 0;
+}
+
+section.credits table tbody .artist a {
+    font-weight: normal;
+    color: #000000;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .tab-content.credits section {
+        padding: 18px 10px 38px 10px;
+    }
+
+    .tab-content.credits section table {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .tab-content.credits section table thead tr {
+        border-top: 1px solid #e3e3e3;
+    }
+
+    .tab-content.credits section table thead tr th a:hover {
+        color: #000;
+        cursor: default;
+    }
+
+    .tab-content.credits section table .year {
+        vertical-align: top;
+        width: 53px;
+    }
+
+    .tab-content.credits section table .album-artist-credit div {
+        width: 100%;
+    }
+}
+
+.basic-info {
+    padding-bottom: 40px;
+}
+
+.basic-info .release-date,
+.basic-info .duration,
+.basic-info .genre,
+.basic-info .styles,
+.basic-info .recording-date,
+.basic-info .writer,
+.basic-info .recording-location,
+.basic-info .active-dates,
+.basic-info .birth,
+.basic-info .death,
+.basic-info .aliases,
+.basic-info .group-members,
+.basic-info .member-of,
+.basic-info .period,
+.basic-info .label,
+.basic-info .format,
+.basic-info .duration,
+.basic-info .release-info,
+.basic-info .catalog-number,
+.basic-info .featured-artist {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    margin: 16px 0 0 0;
+}
+
+.basic-info .release-date h4,
+.basic-info .duration h4,
+.basic-info .genre h4,
+.basic-info .styles h4,
+.basic-info .recording-date h4,
+.basic-info .writer h4,
+.basic-info .recording-location h4,
+.basic-info .active-dates h4,
+.basic-info .birth h4,
+.basic-info .death h4,
+.basic-info .aliases h4,
+.basic-info .group-members h4,
+.basic-info .member-of h4,
+.basic-info .period h4,
+.basic-info .label h4,
+.basic-info .format h4,
+.basic-info .duration h4,
+.basic-info .release-info h4,
+.basic-info .catalog-number h4,
+.basic-info .featured-artist h4 {
+    display: inline-block;
+    width: 104px;
+    margin: 0 0 0 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+.basic-info .genre a,
+.basic-info .styles a,
+.basic-info .group-members a,
+.basic-info .member-of a,
+.basic-info .featured-artist a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 12px;
+    line-height: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0e76bc;
+}
+
+.basic-info .genre a:hover,
+.basic-info .styles a:hover,
+.basic-info .group-members a:hover,
+.basic-info .member-of a:hover,
+.basic-info .featured-artist a:hover {
+    color: #0089c1;
+}
+
+.basic-info .genre,
+.basic-info .styles,
+.basic-info .recording-date,
+.basic-info .group-members,
+.basic-info .recording-location,
+.basic-info .member-of,
+.basic-info .active-dates,
+.basic-info .period,
+.basic-info .birth,
+.basic-info .death,
+.basic-info .aliases,
+.basic-info .label,
+.basic-info .format,
+.basic-info .duration,
+.basic-info .release-info,
+.basic-info .catalog-number,
+.basic-info .featured-artist {
+    overflow: auto;
+}
+
+.basic-info .genre h4,
+.basic-info .styles h4,
+.basic-info .recording-date h4,
+.basic-info .group-members h4,
+.basic-info .recording-location h4,
+.basic-info .member-of h4,
+.basic-info .active-dates h4,
+.basic-info .period h4,
+.basic-info .birth h4,
+.basic-info .death h4,
+.basic-info .aliases h4,
+.basic-info .label h4,
+.basic-info .format h4,
+.basic-info .duration h4,
+.basic-info .release-info h4,
+.basic-info .catalog-number h4,
+.basic-info .featured-artist h4 {
+    float: left;
+}
+
+.basic-info .genre > div,
+.basic-info .styles > div,
+.basic-info .recording-date > div,
+.basic-info .group-members > div,
+.basic-info .recording-location > div,
+.basic-info .member-of > div,
+.basic-info .active-dates > div,
+.basic-info .period > div,
+.basic-info .birth > div,
+.basic-info .death > div,
+.basic-info .aliases > div,
+.basic-info .label > div,
+.basic-info .format > div,
+.basic-info .duration > div,
+.basic-info .release-info > div,
+.basic-info .catalog-number > div,
+.basic-info .featured-artist > div {
+    float: left;
+    width: 166px;
+}
+
+.basic-info .release-info ul,
+.basic-info .recording-location ul {
+    float: left;
+    width: 166px;
+}
+
+.basic-info .release-info ul :not(:last-child),
+.basic-info .recording-location ul :not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.basic-info .submit-corrections {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    display: inline-block;
+    margin: 16px 0 0 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0e76bc;
+}
+
+.basic-info .submit-corrections:hover {
+    color: #0089c1;
+}
+
+.basic-info .writer {
+    overflow: auto;
+}
+
+.basic-info .writer h4 {
+    float: left;
+}
+
+.basic-info .writer form {
+    float: left;
+    width: 166px;
+    margin: 16px 0 0 0;
+}
+
+.overflow-container.release .content-container .sidebar .basic-info {
+    border-top: 0;
+}
+
+.streams.num-1 .streaming-buttons li {
+    width: 100%;
+}
+
+.streams.num-2 .streaming-buttons li {
+    width: 49%;
+}
+
+.streams.num-3 .streaming-buttons li {
+    width: 33%;
+}
+
+.streams.num-4 .streaming-buttons li {
+    width: 25%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.streams h4 {
+    padding-bottom: 9px;
+    margin: 9px 10px 0 10px;
+    border-bottom: 1px solid #e3e3e3;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-indent: 7px;
+}
+
+.streams .streaming-buttons {
+    overflow: hidden;
+    margin: 0 10px 0 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.streams .streaming-buttons li {
+    float: left;
+    height: 34px;
+    border-left: 1px solid #e3e3e3;
+    text-align: center;
+}
+
+.streams .streaming-buttons li a {
+    display: inline-block;
+}
+
+.streams .streaming-buttons li a.spotify {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 59px;
+    height: 22px;
+    background-position: 0px -94px;
+    position: relative;
+    top: 6px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.spotify {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.streams .streaming-buttons li a.discogs {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 59px;
+    height: 22px;
+    background-position: 0px -190px;
+    position: relative;
+    top: 6px;
+    left: 2px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.discogs {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .streams .streaming-buttons li a.discogs {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+        background-position: 0px -212px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-width: 568px) and (min-width: 0px) and (-o-min-device-pixel-ratio: 3 / 2),
+screen and (max-width: 568px) and (min-width: 0px) and (min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.discogs {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.streams .streaming-buttons li a.rdio {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 47px;
+    height: 18px;
+    background-position: 0px -76px;
+    position: relative;
+    top: 8px;
+    left: 2px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.rdio {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.streams .streaming-buttons li a.itunes {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 59px;
+    height: 21px;
+    background-position: 0px -55px;
+    position: relative;
+    top: 7px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.itunes {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .streams .streaming-buttons li a.itunes {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+        background-position: 0px -34px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-width: 568px) and (min-width: 0px) and (-o-min-device-pixel-ratio: 3 / 2),
+screen and (max-width: 568px) and (min-width: 0px) and (min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.itunes {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.streams .streaming-buttons li a.amazon {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 53px;
+    height: 16px;
+    background-position: 0px -17px;
+    position: relative;
+    top: 10px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.amazon {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .streams .streaming-buttons li a.amazon {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+        background-position: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-width: 568px) and (min-width: 0px) and (-o-min-device-pixel-ratio: 3 / 2),
+screen and (max-width: 568px) and (min-width: 0px) and (min-device-pixel-ratio: 2) {
+    .streams .streaming-buttons li a.amazon {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.streams .streaming-buttons li:first-child {
+    border-left: 0;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .content .basic-info {
+        display: none;
+        padding: 0 18px 35px 18px;
+    }
+
+    .content .basic-info .release-date h4,
+    .content .basic-info .duration h4,
+    .content .basic-info .genre h4,
+    .content .basic-info .styles h4,
+    .content .basic-info .recording-date h4,
+    .content .basic-info .writer h4,
+    .content .basic-info .recording-location h4,
+    .content .basic-info .active-dates h4,
+    .content .basic-info .birth h4,
+    .content .basic-info .death h4,
+    .content .basic-info .aliases h4,
+    .content .basic-info .group-members h4,
+    .content .basic-info .member-of h4,
+    .content .basic-info .period h4,
+    .content .basic-info .label h4,
+    .content .basic-info .format h4,
+    .content .basic-info .duration h4,
+    .content .basic-info .release-info h4,
+    .content .basic-info .catalog-number h4,
+    .content .basic-info .featured-artist h4 {
+        width: 40%;
+        margin: 0;
+    }
+
+    .content .basic-info .release-info,
+    .content .basic-info .recording-location {
+        overflow: auto;
+    }
+
+    .content .basic-info .release-info h4,
+    .content .basic-info .recording-location h4 {
+        float: left;
+    }
+
+    .content .basic-info .release-info ul,
+    .content .basic-info .recording-location ul {
+        float: left;
+        width: 60%;
+        margin-top: 0;
+    }
+
+    .content .basic-info .submit-corrections {
+        display: none;
+    }
+
+    .streams {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .streams h4 {
+        border-bottom: 1px solid #313131;
+        color: #ffffff;
+        margin: 0;
+        text-indent: 0;
+    }
+
+    .streams .streaming-buttons {
+        border-bottom: 0;
+        margin: 0;
+    }
+
+    .streams .streaming-buttons li {
+        width: 24%;
+        border-left: 1px solid #313131;
+    }
+
+    .streams .streaming-buttons li a {
+        color: #ffffff;
+    }
+
+    .streams .streaming-buttons li:first-child {
+        border-left: 0;
+    }
+
+    .overflow-container.artist .streams .streaming-buttons,
+    .overflow-container.album .streams .streaming-buttons {
+        margin: 0 0 20px 0;
+        border-bottom: 1px solid #313131;
+    }
+}
+
+.sidebar section.basic-info .streams .streaming-buttons {
+    overflow: visible;
+}
+
+.sidebar section.basic-info .streams .streaming-buttons li.amazontooltip {
+    outline: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+strong {
+    line-height: 30px;
+}
+
+.sidebar section.basic-info .streams .streaming-buttons li.amazontooltip > span,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown {
+    width: auto;
+    padding: 10px 0 0 0;
+    margin-top: 0;
+    margin-left: -120px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    position: absolute;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.35);
+    transition: 0s 0.25s;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown {
+    display: none;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip:hover
+> span {
+    opacity: 1;
+    text-decoration: none;
+    visibility: visible;
+    overflow: visible;
+    margin-top: 45px;
+    display: inline;
+    margin-left: -100px;
+    transition-delay: 0s;
+}
+
+.sidebar section.basic-info .streams .streaming-buttons li.amazontooltip span b,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+b {
+    width: 8px;
+    height: 8px;
+    margin-left: 69px;
+    margin-top: -15px;
+    display: block;
+    position: relative;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-box-shadow: inset -1px 1px 0 #fff;
+    -o-box-shadow: inset 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 #fff;
+    display: none;
+    *display: none;
+}
+
+.sidebar section.basic-info .streams .streaming-buttons li.amazontooltip > span,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #d5d5d5;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.div-0,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.div-0 {
+    padding: 10px 20px 0px 20px;
+    margin-top: -4px;
+    width: auto;
+    height: 45px;
+    position: relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    > span
+    .div-0,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    .amazon-mobile-dropdown
+    .div-0 {
+        margin-top: 0;
+    }
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.div-1,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.div-1 {
+    padding: 10px 20px 10px 20px;
+    border-top: 1px solid #d5d5d5;
+    width: auto;
+    height: 35px;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.amazon-div:hover,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.amazon-div:hover {
+    background-color: #e9f6fc;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.amazon-div
+.amazonDirect,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.amazon-div-mobile
+.amazonDirect,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.amazon-div
+.amazonDirect,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.amazon-div-mobile
+.amazonDirect {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 106px;
+    height: 30px;
+    background-position: 0px -137px;
+    display: block;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    > span
+    .amazon-div
+    .amazonDirect,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    > span
+    .amazon-div-mobile
+    .amazonDirect,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    .amazon-mobile-dropdown
+    .amazon-div
+    .amazonDirect,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    .amazon-mobile-dropdown
+    .amazon-div-mobile
+    .amazonDirect {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.amazon-div
+.amazonUnlimited,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+> span
+.amazon-div-mobile
+.amazonUnlimited,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.amazon-div
+.amazonUnlimited,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+.amazon-div-mobile
+.amazonUnlimited {
+    background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite.png);
+    width: 106px;
+    height: 42px;
+    background-position: 0px -235px;
+    display: block;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    > span
+    .amazon-div
+    .amazonUnlimited,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    > span
+    .amazon-div-mobile
+    .amazonUnlimited,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    .amazon-mobile-dropdown
+    .amazon-div
+    .amazonUnlimited,
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip
+    .amazon-mobile-dropdown
+    .amazon-div-mobile
+    .amazonUnlimited {
+        background-image: url(//cdn-gce.allmusic.com/images/new_affiliate_sprite@2x.png);
+        background-size: 106px 277px;
+    }
+}
+
+.sidebar section.basic-info .streams .streaming-buttons li.amazontooltip span b,
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.amazon-mobile-dropdown
+b {
+    display: block;
+    background: #ffffff;
+    border-top: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.close-container {
+    height: 70px;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #d5d5d5;
+    margin-top: -50px;
+}
+
+.sidebar
+section.basic-info
+.streams
+.streaming-buttons
+li.amazontooltip
+.close-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 5px 10px 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: right;
+    cursor: pointer;
+    vertical-align: bottom;
+    position: absolute;
+    top: 47px;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .sidebar
+    section.basic-info
+    .streams
+    .streaming-buttons
+    li.amazontooltip:hover
+    > span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .sidebar .tab-content.mobile.artist-information {
+        padding: 20px 10px 40px;
+    }
+
+    .sidebar .tab-content.mobile.artist-information section.basic-info {
+        padding: 0;
+        border: 0;
+    }
+
+    .sidebar
+    .tab-content.mobile.artist-information
+    section.basic-info
+    .active-dates {
+        margin: 0;
+    }
+
+    .sidebar
+    .tab-content.mobile.artist-information
+    section.basic-info
+    .birth
+    > div {
+        width: 60%;
+    }
+}
+
+.birth a,
+.death a {
+    font-weight: bold;
+}
+
+.sidebar .artist-image {
+    overflow: hidden;
+    border: 0;
+    margin-bottom: 18px;
+}
+
+.sidebar .artist-image .artist-contain {
+    width: 302px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.sidebar .artist-image img {
+    margin: -1px 0 -3px -1px;
+    min-width: 303px;
+    max-width: 303px;
+    cursor: pointer;
+}
+
+.sidebar .credit {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #cecece;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .sidebar .artist-image {
+        margin-bottom: 0px;
+    }
+}
+
+.gallery-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    z-index: 50000;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.gallery-modal * {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.gallery-modal #img-container {
+    position: relative;
+    margin: 0;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 30vw;
+}
+
+.gallery-modal #img-container .close-gallery {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 55px;
+    margin-top: 4px;
+    display: inline-block;
+    z-index: 100;
+}
+
+.gallery-modal #img-container .close-gallery p {
+    font-size: 32px;
+}
+
+.gallery-modal #img-container .arrow-right,
+.gallery-modal #img-container .arrow-left {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+}
+
+.gallery-modal #img-container .arrow-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 55px;
+}
+
+.gallery-modal #img-container .arrow-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 55px;
+}
+
+.gallery-modal #img-container img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    max-width: 70%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.gallery-modal #img-container .caption,
+.gallery-modal #img-container .credit {
+    color: white;
+    margin: auto 0;
+    text-align: center;
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 10pt;
+    padding-top: 10px;
+    height: 15px;
+}
+
+.gallery-modal #img-container .credit {
+    font-size: 8pt;
+    padding-top: 5px;
+}
+
+.gallery-modal #img-container #carousel {
+    position: relative;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+.gallery-modal #img-container #carousel ul {
+    width: 100%;
+}
+
+.gallery-modal #img-container #carousel ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-modal #img-container #carousel ul li .arrow-left {
+    position: relative;
+    left: -20px;
+}
+
+.gallery-modal #img-container #carousel ul li .arrow-right {
+    position: relative;
+    right: -20px;
+}
+
+.gallery-modal #img-container #carousel .arrow-small {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -30px;
+}
+
+.gallery-modal #img-container #carousel .thumb-img {
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-modal #img-container #carousel img {
+    position: relative;
+    height: 50px;
+    width: auto;
+    max-width: 80px;
+    object-fit: cover;
+}
+
+.gallery-modal #img-container #carousel img:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.gallery-modal #img-container #carousel img.highlight-on {
+    border-color: #00c3ff;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.gallery-modal #img-container #carousel img.highlight-on:hover {
+    border-color: #00c3ff;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.gallery-modal #img-container #carousel img.highlight-off {
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 2px;
+    border-style: solid;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .gallery-modal {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .gallery-modal #img-container {
+        width: 100vw;
+        height: 30vh;
+        top: 60px;
+    }
+
+    .gallery-modal #img-container .close-gallery {
+        margin-right: 10px;
+        margin-top: -37px;
+    }
+
+    .gallery-modal #img-container .arrow-right,
+    .gallery-modal #img-container .arrow-left {
+        top: 40%;
+        z-index: 100;
+        height: 20px;
+        width: 20px;
+    }
+
+    .gallery-modal #img-container .arrow-right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        right: 20px;
+    }
+
+    .gallery-modal #img-container .arrow-left {
+        z-index: 100;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        left: 20px;
+    }
+
+    .gallery-modal #img-container img {
+        max-width: 100%;
+        max-height: none;
+    }
+
+    .gallery-modal #img-container #carousel {
+        display: none;
+    }
+}
+
+.sidebar .saambaa_small {
+    margin: 0 auto 20px;
+    text-align: center;
+    border: 0;
+    clear: both;
+    min-width: 302px !important;
+    float: none;
+}
+
+section.allmusic_anyclip {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background-color: #f6f6f6 !important;
+    height: auto;
+    width: 100%;
+}
+
+#ac-lre-player-ph {
+    margin-bottom: 20px !important;
+    margin-top: 0px !important;
+    background-color: #f6f6f6;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    section.allmusic_anyclip {
+        margin: 0 !important;
+        background-color: inherit !important;
+        display: inline;
+        float: left;
+    }
+
+    #ac-lre-player-ph {
+        margin-bottom: 20px !important;
+        margin-top: 0px !important;
+    }
+}
+
+.overflow-container {
+    /*background-image: url(//cdn-gce.allmusic.com/images/artist/bkg.png);*/
+    background-repeat: repeat-x;
+    /*background-color: #f6f6f6;*/
+}
+
+.overflow-container .content-container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    margin: 0px auto;
+    padding: 18px 10px 0 10px;
+    /*background-image: url(//cdn-gce.allmusic.com/images/artist/bkg-internal.png);*/
+    background-repeat: repeat-x;
+    /*background-color: #f6f6f6;*/
+}
+
+@media screen and (min-width: 321px) and (max-width: 1024px) {
+    .overflow-container .content-container {
+        width: 960px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .overflow-container .content-container {
+        min-width: 320px;
+        width: 100%;
+    }
+}
+
+.overflow-container .content-container .content {
+    display: inline;
+    float: left;
+    margin-right: 0px;
+    width: 640px;
+}
+
+* html .overflow-container .content-container .content {
+    overflow-x: hidden;
+}
+
+.overflow-container .content-container .grammy_submit {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 14px;
+    line-height: 1.4rem;
+    font-weight: normal;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 3px solid #e3e3e3;
+}
+
+.overflow-container .content-container .grammy_submit ul {
+    padding-left: 25px;
+}
+
+.overflow-container .content-container .grammy_submit li {
+    list-style-type: disc;
+}
+
+.overflow-container .content-container .complex_suitcase {
+    margin-bottom: 20px;
+}
+
+.overflow-container .inline-image.odd {
+    float: right;
+    margin-left: 20px;
+}
+
+.overflow-container .inline-image.even {
+    float: left;
+    margin-right: 20px;
+}
+
+.overflow-container .tabs .tab.mobile:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) {
+    .overflow-container .content-container {
+        background-image: none;
+        background-color: #000000;
+        margin-bottom: 0;
+        background-image: none;
+        background-color: #000000;
+        padding: 18px 0 0 0;
+    }
+
+    .overflow-container .content-container .allmusic-share {
+        display: none;
+    }
+
+    .overflow-container
+    .content-container
+    #complex_suitcase_btf.complex_suitcase {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .overflow-container
+    .content-container
+    .sidebar
+    .advertising.medium-rectangle {
+        margin: 0 auto 20px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 0px) and (max-width: 568px) and (min-width: 0px) {
+    .overflow-container .content-container .content {
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+    }
+}
+
+.overflow-container .inline-image.odd {
+    float: right;
+}
+
+.overflow-container .inline-image.even {
+    float: left;
+}
+}

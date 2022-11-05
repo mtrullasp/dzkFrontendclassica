@@ -1,0 +1,74 @@
+ ::before, ::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+section {
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+header, footer {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+div {
+  border-width: "5px";
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div:focus {
+  outline: none;
+}
+
+
+div {
+  caret-color: rgba(0,0,0,0);
+}
+
+li.composer-list .nom-composer {
+  visibility: hidden;
+}
+
+li.composer-list:hover .nom-composer {
+  visibility: visible;
+  opacity: 1;
+}
+
+li.composer-list:hover .nom-composer {
+  font-size: 12px;
+  background-blend-mode: hard-light;
+  left: 19px;
+  font-weight: bolder;
+}
+
+li.composer-list:hover .cognom-composer {
+  color: #1A202C;
+  opacity: 0.8;
+  font-size: 20px!important;
+}
+
+li.composer-list .cognom-composer {
+  color: #1A202C;
+  opacity: 0.8;
+  font-size: 16px!important;
+}
