@@ -3,7 +3,7 @@ import AlbumsList, { IAlbumsListProps } from "./AlbumsList";
 import AlbumsStore from "./AlbumsStore";
 import { Observer } from "mobx-react";
 import { useParams } from "react-router-dom";
-import ComposerOneTemplate from "./ComposerOneTemplate";
+import ComposerOneTemplate from "./pages/composer/ComposerOneTemplate";
 import { useComposerstore } from "./index";
 
 export interface AlbumsListWorkParams {

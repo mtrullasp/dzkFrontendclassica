@@ -39,7 +39,7 @@ export const ROUTE_DISCOVER = "/content/discover";
 export const SECONDARY_COLOR = paleta.color700;
 export const SECONDARY_HEADER_COLOR = paleta.color200;
 
-export const WEB_API_HOST = "http://localhost:1884/"; // '"http://MOISES-PC:50688/"; //'"http://MOISES-PC/Klassica/";
+export const WEB_API_HOST = "http://localhost/dzk2022WebApi/"; //"http://localhost:1884/"; // '"http://MOISES-PC:50688/"; //'"http://MOISES-PC/Klassica/";
 
 export const PLAYER_NO_PLAY_COLOR = "#edede7";
 export const PLAYER_PLAY_COLOR = "#c4c4b0";

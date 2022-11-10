@@ -49,14 +49,19 @@ class ComposersStore {
 
   composerAct: IComposer = null;
 
+  public setActiveComposerByIdMN = (idMN: string) => {
+    const composer = this.allComposers.find((f) => f.idMN === idMN);
+    this.composerAct = composer;
+  };
+
   allComposers: IComposer[];
 
   public fOrderByRanking = (): IComposer[] => {
-    return this.allComposers.sort((s1, s2) => s1.ranking - s2.ranking);
+    return this.allComposers.slice(0).sort((s1, s2) => s1.ranking - s2.ranking);
   };
 
   public fOrderByRankingDesc = (): IComposer[] => {
-    return this.allComposers.sort((s1, s2) => s2.ranking - s1.ranking);
+    return this.allComposers.slice(0).sort((s1, s2) => s2.ranking - s1.ranking);
   };
 
   public fOrderByName = (): IComposer[] => {
@@ -121,6 +126,7 @@ class ComposersStore {
   worksRaw: IWork[] = [];
 
   @computed get works(): IWork[] {
+    debugger;
     return this.worksRaw.slice().sort((a: IWork, b: IWork) => {
       if (this.workSortDir === "asc") {
         return a[this.workSort] - b[this.workSort];

@@ -33,6 +33,7 @@
     "material-ui-player": "^1.0.10",
     "mobx": "^6.6.1",
     "mobx-react": "^7.5.1",
+    "mobx-store-provider": "^2.1.2",
     "mui-image": "^1.0.7",
     "parcel": "^2.6.2",
     "prettier": "^2.7.1",
@@ -51,11 +52,14 @@
     "react-virtualized-auto-sizer": "^1.0.7",
     "react-window": "^1.8.8",
     "sass": "^1.53.0",
+    "scss": "^0.2.4",
     "source-map-loader": "^4.0.0",
     "spotify": "^0.3.0",
     "styled-components": "^5.3.5",
     "tailwindcss-radix": "^2.6.1",
+    "tsx-control-statements": "^4.1.1",
     "typescript": "^4.7.4",
+    "use-error-boundary": "^2.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

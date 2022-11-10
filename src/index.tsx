@@ -5,17 +5,29 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ComposersStore from "./stores/ComposersStore";
-import { Provider } from "mobx-react";
+import PerformersStore from "./stores/PerformersStore";
+//import { Provider } from "mobx-react";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 const composersData = new ComposersStore();
-const storeContext = React.createContext<ComposersStore | null>(composersData);
+const performersData = new PerformersStore();
+const composersContext = React.createContext<ComposersStore | null>(
+  composersData
+);
+const performerContext = React.createContext<PerformersStore | null>(
+  performersData
+);
 
 export const useComposerstore = () => {
-  const store = React.useContext(storeContext);
+  const store = React.useContext(composersContext);
+  return store;
+};
+
+export const usePerformersStore = () => {
+  const store = React.useContext(performerContext);
   return store;
 };
 

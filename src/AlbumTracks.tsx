@@ -18,7 +18,7 @@ import AudioCard from "./player/components/AudioCard";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { blueGrey, green, purple } from "@mui/material/colors";
 import { MARGIN_LEFT } from "./util/constants";
-import { WIDTH } from "./ComposerOneTemplate";
+import { WIDTH } from "./pages/composer/ComposerOneTemplate";
 // import * from "deezer-sdk";
 
 export interface IAlbumTracksProps {

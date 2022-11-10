@@ -20,6 +20,7 @@ const GhostButton = (props: IGhostButtonProps) => {
     <Button
       className={"ghost-button"}
       style={{
+        textAlign: "left",
         fontSize: (props.size || 14) + "!important",
         width: "100%",
         height: 70,

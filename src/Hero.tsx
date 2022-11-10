@@ -1,20 +1,10 @@
 import React from "react";
-import { Route, useNavigate } from "react-router-dom";
-import ComposersStore, { getNomCognoms } from "./stores/ComposersStore";
+import { useNavigate } from "react-router-dom";
+// import ComposersStore, { getNomCognoms } from "./stores/ComposersStore";
 import ImageComposerOne from "./ImageComposerOne";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import { LayoutContainer } from "./layout/LayoutSantGrial";
-import {
-  Typography,
-  Grid,
-  Icon,
-  Button,
-  Fab,
-  Input,
-  InputAdornment,
-  IconButton,
-  TextField,
-} from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -28,19 +18,21 @@ import {
   parters,
   partnersSo,
 } from "./stores/ImagesStore";
-import { debounce, throttle } from "lodash";
+//import { debounce, throttle } from "lodash";
 import "./artists.scss";
-import BigText from "./BigText";
+//import BigText from "./BigText";
 // import { Input, Input as InputSearch } from "@sajari/react-search-ui";
-import MenuButton from "./MenuButton";
+// import MenuButton from "./MenuButton";
 import { useComposerstore } from "./index";
-import { Observer } from "mobx-react";
-import Login from "./Login";
+import { Observer } from "mobx-react-lite";
+//import Login from "./Login";
 import MenuButtonGroup, { IMenuItem } from "./MenuButtonGroup";
-import { text } from "stream/consumers";
-import { Search } from "@mui/icons-material";
-import MenuComposerOrPerformers from "./MenuComposerOrPerformers";
+//import { text } from "stream/consumers";
+//import { Search } from "@mui/icons-material";
+//import MenuComposerOrPerformers from "./MenuComposerOrPerformers";
 import { MainHeader } from "./App";
+import ComposersStore from "./stores/ComposersStore";
+//import MyObserver from "./components/MyObserver";
 // import Login from "./Login";
 
 export const burdeos = "#800040";
@@ -48,14 +40,14 @@ export const sienna = "#c58a3e";
 
 const imgStyle: React.CSSProperties = {
   opacity: 0.32,
-  height: "40vw",
+  height: "45vw",
   position: "relative",
   top: 50,
   cursor: "pointer",
 };
 
 const getRandom = (store: ComposersStore): IComposer => {
-  return store.getRandomComposer(100);
+  return store.getRandomComposer(200);
 };
 
 const Hero = () => {
@@ -64,7 +56,13 @@ const Hero = () => {
     <Observer>
       {() => (
         <LayoutContainer
-          headerContent={<MainHeader />}
+          headerContent={
+            <MainHeader
+              showHome={false}
+              showBack={false}
+              showNextPrevious={false}
+            />
+          }
           clientContent={<HeroContent />}
           leftNavBarContent={<HeroMenuLeft />}
           rightLinkBarContent={<HeroRigth />}
@@ -78,6 +76,7 @@ const Hero = () => {
 const HeroFooter = () => {
   const store = useComposerstore();
   store.composerAct = getRandom(store);
+  /*alert(store.composerAct.Nom);*/
   return (
     <Grid
       container
@@ -90,16 +89,20 @@ const HeroFooter = () => {
         container
         style={{
           position: "absolute",
-          bottom: 20,
+          bottom: 0,
           left: 50,
           width: "50%",
         }}
-        spacing={4}
+        spacing={0}
       >
         {parters.map((p) => {
           return (
             <Grid item lg={1}>
-              <ImageBase64 base64Content={p} width={40}></ImageBase64>
+              <ImageBase64
+                base64Content={p}
+                width={35}
+                maxWidth={35}
+              ></ImageBase64>
             </Grid>
           );
         })}
@@ -108,11 +111,11 @@ const HeroFooter = () => {
         container
         style={{
           position: "absolute",
-          bottom: 20,
+          bottom: 0,
           left: "50%",
           width: "50%",
         }}
-        spacing={4}
+        spacing={0}
       >
         <Grid item lg={6}></Grid>
         {partnersSo.map((p, i) => {
@@ -122,7 +125,11 @@ const HeroFooter = () => {
           }
           return (
             <Grid item lg={2} alignItems={"center"}>
-              <ImageBase64 base64Content={p} width={width}></ImageBase64>
+              <ImageBase64
+                base64Content={p}
+                width={35}
+                maxWidth={35}
+              ></ImageBase64>
             </Grid>
           );
         })}
@@ -180,26 +187,11 @@ const HeroMenuLeft = () => {
           }}
         >
           <span style={{ color: burdeos }}>Clàssica</span>
-        </Typography>
-      </Grid>
-      <Grid item lg={12}>
-        <Typography
-          marginTop={-40}
-          marginRight={6}
-          fontSize={25}
-          align={"right"}
-          variant="h1"
-          fontWeight={400}
-          style={{
-            position: "relative",
-            top: 100,
-            color: sienna,
-          }}
-          onClick={() => {
-            navigate("/Composers");
-          }}
-        >
-          versió 3.0
+          <small
+            style={{ fontSize: 22, position: "relative", top: 20, right: 40 }}
+          >
+            v. 3.0
+          </small>
         </Typography>
       </Grid>
       <Grid
@@ -214,42 +206,54 @@ const HeroMenuLeft = () => {
 
 const HeroRigth = () => {
   const store = useComposerstore();
-  return (
-    <Grid item lg={4} justifyContent={"flex-end"}>
-      <Typography>
-        <small style={{ fontSize: 22 }}>v. 3.0</small>
-        <small style={{ fontSize: 15, marginLeft: 4 }}>
-          <b>
-            <i>Moisès Trullàs</i>
-          </b>
-        </small>
-      </Typography>
-    </Grid>
-  );
+  return null;
 };
 const HeroContent = () => {
   const store = useComposerstore();
+  store.composerAct = getRandom(store);
+  debugger;
   return (
-    <Grid item lg={4}>
-      <Grid container>
-        <Grid item lg={12}>
-          <ImageComposerOne
-            onClick={() => {
-              store.composerAct = getRandom(store);
-            }}
-            base64={store.composerAct?.PictureHeaderBioBase64}
-            imgStyle={imgStyle}
-          />
+    <Observer>
+      {() => (
+        <Grid
+          item
+          lg={4}
+          style={{ zIndex: 1000 }}
+          onClick={() => {
+            store.composerAct = getRandom(store);
+          }}
+        >
+          <Grid
+            container
+            style={{ top: -80, position: "relative", marginLeft: 150 }}
+          >
+            <Grid item lg={12}>
+              <ImageComposerOne
+                base64={store.composerAct?.PictureHeaderBioBase64}
+                imgStyle={imgStyle}
+              />
+              <Typography
+                style={{
+                  position: "relative",
+                  left: 350,
+                  color: burdeos,
+                  top: -300,
+                }}
+                variant={"h5"}
+              >
+                <b>
+                  <big>{store.composerAct?.Nom}</big>
+                </b>
+                <br />
+                <small>
+                  {store.composerAct?.AnyoNeix} - {store.composerAct?.AnyoDefu}
+                </small>
+              </Typography>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item lg={12} style={{ marginTop: -100 }}>
-          <Typography variant={"h5"} style={{ color: burdeos }}>
-            {store.composerAct?.Nom}
-            <br />
-            {store.composerAct?.AnyoNeix} - {store.composerAct?.AnyoDefu}
-          </Typography>
-        </Grid>
-      </Grid>
-    </Grid>
+      )}
+    </Observer>
   );
 };
 

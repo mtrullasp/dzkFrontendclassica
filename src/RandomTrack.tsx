@@ -50,10 +50,10 @@ const RandomTrack = () => {
 
   const { rankComposer } = useParams();
   randomStore.getRandomTrack(Number(rankComposer), -1);
-
   return (
     <Observer>
       {() => {
+        const vers = randomStore.responseRandomTrack?.NumVersions;
         return (
           <>
             {randomStore.playTrack(randomStore?.responseRandomTrack?.IdTrack)}
@@ -112,13 +112,13 @@ const RandomTrack = () => {
             </Grid>
             <EspaiVertical size={2} />
             <Grid container spacing={4}>
-              <Grid item lg={5} spacing={2}>
+              <Grid item lg={6} spacing={2}>
                 <img
                   src={randomStore.responseRandomTrack?.AlbumImageUrl}
                   width="100%"
                 />
               </Grid>
-              <Grid item lg={7}>
+              <Grid item lg={6}>
                 <Grid container style={{ textAlign: "left" }}>
                   {/*
                   <Grid lg={12}>
@@ -134,11 +134,6 @@ const RandomTrack = () => {
                   </Grid>
                   <Grid lg={12}>
                     <Typography variant={"h3"}>
-                      {randomStore.responseRandomTrack?.NumVersions}
-                    </Typography>
-                  </Grid>
-                  <Grid lg={12}>
-                    <Typography variant={"h3"}>
                       {randomStore.responseRandomTrack?.ObraName}
                     </Typography>
                   </Grid>
@@ -147,6 +142,11 @@ const RandomTrack = () => {
                       variant={"h4"}
                       dangerouslySetInnerHTML={createMarkup()}
                     ></Typography>
+                  </Grid>
+                  <Grid lg={12} style={{ marginTop: 30 }}>
+                    <Typography variant={"h4"}>
+                      {vers > 1 && "i " + vers + " versions més"}
+                    </Typography>
                   </Grid>
                   <Grid
                     lg={12}

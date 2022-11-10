@@ -7,6 +7,7 @@ body {
   height: 100vh;
   margin: 0;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
 }
 section {
@@ -72,3 +73,8 @@ li.composer-list .cognom-composer {
   opacity: 0.8;
   font-size: 16px!important;
 }
+
+ .MuiImageListItemBar-title {
+   font-size: 20px!important;
+   cursor: pointer!important;
+ }

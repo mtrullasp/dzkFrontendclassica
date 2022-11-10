@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Grid,
   ImageList,
   ImageListItem,
   ImageListItemBar,
@@ -31,9 +32,8 @@ const AlbumsList = (props: IAlbumsListProps) => {
               {props.workName} . {props.albums.length}
             </Typography>
             <ImageList
-              style={{ overflowY: "hidden", height: "100%" }}
-              variant={"quilted"}
-              sx={{ width: "auto" }}
+              style={{ overflowY: "hidden", height: "auto" }}
+              variant={"standard"}
               cols={5}
             >
               {props.albums.map((a: IAlbum) => {
@@ -57,6 +57,8 @@ const AlbumsList = (props: IAlbumsListProps) => {
                 );
               })}
             </ImageList>
+            <Grid style={{}}></Grid>
+            <Grid style={{ width: "100%", height: "auto" }} />
           </div>
         );
       }}

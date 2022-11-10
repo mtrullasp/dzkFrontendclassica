@@ -1,7 +1,6 @@
 import * as React from "react";
 import { CSSProperties } from "react";
 import "./artists.scss";
-import { getCodeFromHRef } from "./stores/ComposersStore";
 import { useNavigate } from "react-router-dom";
 
 interface IProps {
@@ -9,6 +8,11 @@ interface IProps {
   onLink: (href: string, e: React.MouseEvent<HTMLElement>) => void;
   style?: CSSProperties;
 }
+
+const getCodeFromHRef = (href: string): string => {
+  return href.substring(href.length - 12);
+};
+
 const HyperText = (props: IProps) => {
   const navigate = useNavigate();
   return (
@@ -20,14 +24,7 @@ const HyperText = (props: IProps) => {
         ...props.style,
       }}
       onClick={(e: any) => {
-        let href = e.target["href"];
-        if (!!href) {
-          // props.onLink(href, e);
-        } else {
-          href = e.target.parentElement["href"];
-          navigate("/ComposerOneTemplate/" + getCodeFromHRef(href));
-          // props.onLink(href, e);
-        }
+        props.onLink(e.target.href, e);
       }}
     >
       {props.text}

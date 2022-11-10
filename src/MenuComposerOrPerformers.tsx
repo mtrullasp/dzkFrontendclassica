@@ -10,8 +10,10 @@ import {
 import BigText from "./BigText";
 import { useNavigate } from "react-router-dom";
 import GhostButton from "./GhostButton";
+import { LayoutContainer } from "./layout/LayoutSantGrial";
+import { MainHeader } from "./App";
 
-const MenuComposerOrPerformers = () => {
+export const MenuComposerOrPerformersIntern = () => {
   const navigate = useNavigate();
   const style: React.CSSProperties = {
     height: "100vh",
@@ -60,11 +62,25 @@ const MenuComposerOrPerformers = () => {
             ...style,
           }}
           onClick={() => {
-            navigate("/Performers");
+            navigate("/Rols");
           }}
         ></Box>
       </Stack>
     </Container>
+  );
+};
+
+const MenuComposerOrPerformers = () => {
+  return (
+    <LayoutContainer
+      headerContent={
+        <MainHeader showHome={true} showBack={true} showNextPrevious={false} />
+      }
+      clientContent={<MenuComposerOrPerformersIntern />}
+      leftNavBarContent={null}
+      rightLinkBarContent={null}
+      footerContent={null}
+    />
   );
 };
 

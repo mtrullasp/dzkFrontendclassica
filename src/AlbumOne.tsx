@@ -1,6 +1,6 @@
 import React from "react";
 import { useComposerstore } from "./index";
-import ComposerOneTemplate from "./ComposerOneTemplate";
+import ComposerOneTemplate from "./pages/composer/ComposerOneTemplate";
 import MusicPlayer from "./MusicPlayer";
 import MusicPlayerAlbum from "./MusicPlayer";
 
