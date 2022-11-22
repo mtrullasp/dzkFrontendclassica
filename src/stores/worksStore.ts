@@ -12,7 +12,7 @@ export interface IWork {
   idComposerMN: string;
   workGenre: string;
   workType: string;
-  idWork: string;
+  idWork: number;
 }
 
 export class WorksStore {

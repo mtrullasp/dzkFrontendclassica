@@ -70,7 +70,7 @@ export const LayoutFooter = (props: IPropsContent) => {
         className="bg-gray-100 p-2"
         style={{ backgroundColor: "burdeos" }}
       >
-        <PlayBar />
+        {/*<PlayBar />*/}
       </footer>
     )
   );

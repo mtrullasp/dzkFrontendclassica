@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IComposer } from "../../interfaces";
-import ImageComposerOne from "../../ImageComposerOne";
+import ImageComposerOne from "./ImageComposerOne";
 import {
   Box,
   Button,
@@ -26,7 +26,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import HomeIcon from "@mui/icons-material/Home";
-import AlbumsListWork from "../../AlbumsListWork";
+import AlbumsListWork from "../../components/albums/AlbumsListWork";
 import EspaiVertical from "../../EspaiVertical";
 import { Header } from "grommet";
 import GhostButton from "../../GhostButton";

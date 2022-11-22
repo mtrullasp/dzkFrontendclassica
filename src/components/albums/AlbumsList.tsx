@@ -6,13 +6,14 @@ import {
   ImageListItemBar,
   Typography,
 } from "@mui/material";
-import ImageBase64 from "./ImageBase64";
+import ImageBase64 from "../../ImageBase64";
 import AlbumsStore, { IAlbum } from "./AlbumsStore";
 import { Observer } from "mobx-react";
 import { Route, useNavigate } from "react-router-dom";
 import AlbumOne from "./AlbumOne";
-import ComposersStore from "./stores/ComposersStore";
-import { useComposerstore } from "./index";
+import ComposersStore from "../../stores/ComposersStore";
+import { useComposerstore } from "../../index";
+import { ITrackAlbum } from "../../stores/RandomStore";
 
 export interface IAlbumsListProps {
   workName: string;
@@ -20,28 +21,26 @@ export interface IAlbumsListProps {
 }
 
 const AlbumsList = (props: IAlbumsListProps) => {
-  console.log("const AlbumsList = (props: IAlbumsListProps) => {");
   const navigate = useNavigate();
-  const store = useComposerstore();
+  // const store = useComposerstore();
   return (
     <Observer>
       {() => {
         return (
           <div>
             <Typography variant={"h4"} align="left">
-              {props.workName} . {props.albums.length}
+              {props?.workName} . {props.albums?.length}
             </Typography>
             <ImageList
               style={{ overflowY: "hidden", height: "auto" }}
               variant={"standard"}
               cols={5}
             >
-              {props.albums.map((a: IAlbum) => {
+              {props?.albums?.map((a: IAlbum) => {
                 return (
                   <ImageListItem
                     key={a.nameMW}
                     onClick={() => {
-                      store.setActiveAlbum(a);
                       navigate("/Album/" + a.idAlbum);
                     }}
                   >

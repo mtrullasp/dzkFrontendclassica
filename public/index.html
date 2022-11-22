@@ -1,47 +1,104 @@
-<html>
-<head>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <title>Classical Experience. next</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
-  <link
-          href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200"
-          rel="stylesheet"
-          type="text/css"
-  />
-  <link
-          rel="stylesheet"
-          href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css"
-  />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-</head>
-<body style="margin: 0;">
-<div id="root"></div>
-<div id="dz-root" style='display:none'></div>
-<script src="https://e-cdn-files.dzcdn.net/js/min/dz.js"></script>
-<script>
-  DZ.init({
-    appId: '321142',
-    channelUrl: 'http://pc-nou:3000/channel.html',
-    player: {
-      onload: function() {
-        console.log("loaded");
-        /*DZ.player.playTracks([1000000]);*/
-      }
-    }
-  });
-</script>
-<script>
-  DZ.login(function(response) {
-    if (response.authResponse) {
-      console.log('Welcome!  Fetching your information.... ');
-      DZ.api('/user/me', function(response) {
-        debugger ;
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <link rel="stylesheet" href="assets/fonts/font.css" />
+    <meta
+            name="description"
+            content="<%= htmlWebpackPlugin.options.description %>"
+    />
+    <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes"
+    />
+    <link rel="shortcut icon" href="/assets/static/favicon.ico" />
+    <link
+            rel="apple-touch-icon"
+            sizes="16x16"
+            href="/assets/static/favicon-16x16.png"
+    />
+    <link
+            rel="apple-touch-icon"
+            sizes="32x32"
+            href="/assets/static/favicon-32x32.png"
+    />
+    <link
+            rel="apple-touch-icon"
+            sizes="48x48"
+            href="/assets/static/favicon-48x48.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/static/favicon-16x16.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/static/favicon-32x32.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="48x48"
+            href="/assets/static/favicon-48x48.png"
+    />
+    <meta name="theme-color" content="#dbdbdb" />
+  </head>
+  <body>
+    <div id="app" class="app"></div>
+    <div id="modals"></div>
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u = 'https://analytics.sayhello.agency/';
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', '6']);
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+      <div id="root"></div>
+      <div id="dz-root" style='display:none'></div>
+      <script src="https://e-cdn-files.dzcdn.net/js/min/dz.js"></script>
+    <div id="root"></div>
+    <div id="dz-root" style='display:none'></div>
+    <script src="https://e-cdn-files.dzcdn.net/js/min/dz.js"></script>
+    <script>
+      DZ.init({
+        appId: '321142',
+        channelUrl: 'http://pc-nou:3000/channel.html',
+        player: {
+          onload: function() {
+            console.log("loaded");
+            /*DZ.player.playTracks([1000000]);*/
+          }
+        }
       });
-    } else {
-      console.log('User cancelled login or did not fully authorize.');
-    }
-  }, {perms: 'basic_access,email'});
-</script></body>
+    </script>
+    <script>
+      DZ.login(function(response) {
+        if (response.authResponse) {
+          console.log('Welcome!  Fetching your information.... ');
+          DZ.api('/user/me', function(response) {
+            debugger ;
+          });
+        } else {
+          console.log('User cancelled login or did not fully authorize.');
+        }
+      }, {perms: 'basic_access,email'});
+    </script>
+  </body>
 </html>

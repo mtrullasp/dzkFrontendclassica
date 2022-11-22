@@ -1,5 +1,10 @@
 import { makeAutoObservable } from "mobx";
-import { HOST_WEB_API } from "./stores/RandomStore";
+import {
+  HOST_WEB_API,
+  IAlbumTrack,
+  ITrackAlbum,
+  ITracksView,
+} from "../../stores/RandomStore";
 import axios, { Axios, AxiosResponse } from "axios";
 
 export interface IAlbum {
@@ -17,7 +22,7 @@ class AlbumsStore {
 
   albums: IAlbum[] = [];
 
-  getAlbumsByWork = (idWork: string) => {
+  getAlbumsByWork = (idWork: number) => {
     const url = HOST_WEB_API + "/AlbumsByWork?idWork=" + idWork;
     axios.get<IAlbum[]>(url).then((response: AxiosResponse<IAlbum[]>) => {
       debugger;

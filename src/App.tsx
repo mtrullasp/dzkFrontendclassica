@@ -21,10 +21,10 @@ import Hero from "./Hero";
 import RandomTrack from "./RandomTrack";
 import ComposerOne from "./pages/composer/ComposerOne";
 import ComposerOneWorks from "./pages/composer/ComposerOneWorks";
-import AlbumsList from "./AlbumsList";
-import AlbumsListWork from "./AlbumsListWork";
+import AlbumsList from "./components/albums/AlbumsList";
+import AlbumsListWork from "./components/albums/AlbumsListWork";
 import { useComposerstore } from "./index";
-import AlbumOne from "./AlbumOne";
+import AlbumOne from "./components/albums/AlbumOne";
 import Login from "./Login";
 import { Spotify } from "grommet-icons";
 import $ from "jquery";
@@ -37,8 +37,10 @@ import {
 } from "./stores/ImagesStore";
 import SearchIcon from "@mui/icons-material/Search";
 import { Navegador } from "./pages/composer/ComposerOneTemplate";
-import Performers from "./pages/performers/Performers";
-import Rols from "./pages/performers/Rols";
+import Performers from "./pages/performer/Performers";
+import Rols from "./pages/performer/Rols";
+import AlbumsListPerformer from "./components/albums/AlbumsListPerformer";
+import PerformerOne from "./pages/performer/PerformerOne";
 
 function NoMatch() {
   let location = useLocation();
@@ -143,6 +145,7 @@ const App = () => {
   const navigate = useNavigate();
 
   return (
+    /*
     <ErrorBoundary
       fallbackRender={(e) => {
         debugger;
@@ -154,42 +157,43 @@ const App = () => {
         );
       }}
     >
-      <div className="App" onClick={(e) => {}}>
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/Rols" element={<Rols />} />
-          <Route path="/Performers/:idRol" element={<Performers />} />
-          <Route
-            path="/Composers"
-            element={
-              <Composers
-                onSelectComposer={(c) => {
-                  store.composerAct = c;
-                  navigate("/ComposerOne/" + c?.idMN);
-                }}
-              />
-            }
-          />
-          <Route path="/ComposerOne/:idMN" element={<ComposerOne />}></Route>
-          <Route
-            path="/ComposerOne/:idMN/Works/:idMC/Albums"
-            element={<AlbumsListWork />}
-          />
-          <Route
-            path="/ComposerOne/:idMN/Works"
-            element={<ComposerOneWorks />}
-          ></Route>
-          <Route path="/Album/:idAlbum" element={<AlbumOne />} />
-          <Route path="/RandomTrack" element={<RandomTrack />} />
-          <Route path="/RandomTrack/:rankComposer" element={<RandomTrack />} />
-          <Route path="/Login" element={<Login />} />
-          <Route
-            path="/MenuComposerOrPerformers"
-            element={<MenuComposerOrPerformers />}
-          />
-        </Routes>
-      </div>
-    </ErrorBoundary>
+*/
+    <div className="App" onClick={(e) => {}}>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/Rols" element={<Rols />} />
+        <Route path="/Performers/:idRol" element={<Performers />} />
+        <Route
+          path="/Composers"
+          element={
+            <Composers
+              onSelectComposer={(c) => {
+                store.composerAct = c;
+                navigate("/ComposerOne/" + c?.idMN);
+              }}
+            />
+          }
+        />
+        <Route path="/ComposerOne/:idMN" element={<ComposerOne />}></Route>
+        <Route
+          path="/ComposerOne/:idMN/Works/:idMC/Albums"
+          element={<AlbumsListWork />}
+        />
+        <Route
+          path="/ComposerOne/:idMN/Works"
+          element={<ComposerOneWorks />}
+        ></Route>
+        <Route path="/Performer/:id/Albums" element={<AlbumsListPerformer />} />
+        <Route path="/Album/:idAlbum" element={<AlbumOne />} />
+        <Route path="/RandomTrack" element={<RandomTrack />} />
+        <Route path="/RandomTrack/:rankComposer" element={<RandomTrack />} />
+        <Route path="/Login" element={<Login />} />
+        <Route
+          path="/MenuComposerOrPerformers"
+          element={<MenuComposerOrPerformers />}
+        />
+      </Routes>
+    </div>
   );
 };
 

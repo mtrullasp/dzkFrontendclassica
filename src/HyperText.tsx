@@ -1,6 +1,5 @@
 import * as React from "react";
 import { CSSProperties } from "react";
-import "./artists.scss";
 import { useNavigate } from "react-router-dom";
 
 interface IProps {

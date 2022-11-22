@@ -4,7 +4,7 @@ import { HOST_WEB_API, ITrackAlbum } from "./RandomStore";
 import { computed, makeAutoObservable, reaction } from "mobx";
 import { IWork } from "./worksStore";
 import { shuffle } from "../shuffle";
-import { IAlbum } from "../AlbumsStore";
+import { IAlbum } from "../components/albums/AlbumsStore";
 
 class ComposersStore {
   constructor() {
@@ -114,7 +114,7 @@ class ComposersStore {
 
   workAct: IWork = null;
 
-  setWorkActById = (idMC: string) => {
+  setWorkActById = (idMC: number) => {
     this.workAct = this.works.find((el) => el.idWork === idMC);
   };
 
@@ -150,15 +150,6 @@ class ComposersStore {
       this.workSort = camp;
       this.workSortDir = "asc";
     }
-  };
-
-  activeAlbumTracks: ITrackAlbum[] = [];
-
-  getAlbumTracks = (idAlbum: number) => {
-    const url = HOST_WEB_API + "/Tracks?idAlbum=" + idAlbum;
-    axios.get<ITrackAlbum[]>(url).then((r) => {
-      this.activeAlbumTracks = r.data;
-    });
   };
 
   getWorks = (idMN: string) => {

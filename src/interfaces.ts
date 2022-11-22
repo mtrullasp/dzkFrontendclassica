@@ -5,5 +5,5 @@ export class IComposer {
   PictureHeaderBioBase64: string;
   AnyoNeix: string;
   AnyoDefu: string;
-  biographpy: string;
+  bio: string;
 }

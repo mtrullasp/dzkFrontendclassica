@@ -1,7 +1,7 @@
 import React from "react";
 import { IComposer } from "../../interfaces";
 import { Observer } from "mobx-react";
-import ImageComposerOne from "../../ImageComposerOne";
+import ImageComposerOne from "./ImageComposerOne";
 import {
   Grid,
   Paper,
@@ -20,7 +20,7 @@ import BigText from "../../BigText";
 import ComposerOneTemplate from "./ComposerOneTemplate";
 import { useNavigate, useParams } from "react-router-dom";
 import { IWork, WorksStore } from "../../stores/worksStore";
-import AlbumsStore from "../../AlbumsStore";
+import AlbumsStore from "../../components/albums/AlbumsStore";
 import { useComposerstore } from "../../index";
 
 const FONT_SIZE = 14;

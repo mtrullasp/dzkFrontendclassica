@@ -3,8 +3,8 @@ import AlbumsList, { IAlbumsListProps } from "./AlbumsList";
 import AlbumsStore from "./AlbumsStore";
 import { Observer } from "mobx-react";
 import { useParams } from "react-router-dom";
-import ComposerOneTemplate from "./pages/composer/ComposerOneTemplate";
-import { useComposerstore } from "./index";
+import { useAlbumsStore, useComposerstore } from "../../index";
+import ComposerOneTemplate from "../../pages/composer/ComposerOneTemplate";
 
 export interface AlbumsListWorkParams {
   idMN: string;
@@ -12,10 +12,11 @@ export interface AlbumsListWorkParams {
 }
 const AlbumsListWork = () => {
   const { idMN, idMC } = useParams();
-  const albumsData = new AlbumsStore();
-  const store = useComposerstore();
-  store.setWorkActById(idMC);
-  albumsData.getAlbumsByWork(idMC);
+  debugger;
+  const cStore = useComposerstore();
+  const aStore = useAlbumsStore();
+  cStore.setWorkActById(Number(idMC));
+  aStore.getAlbumsByWork(Number(idMC));
 
   /*
   return <div>HOLA</div>;
@@ -28,8 +29,8 @@ const AlbumsListWork = () => {
             content={
               <div>
                 <AlbumsList
-                  albums={albumsData.albums}
-                  workName={store.workAct.nameWork}
+                  albums={aStore.albums}
+                  workName={cStore?.workAct?.nameWork}
                 />
               </div>
             }

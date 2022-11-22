@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ITrackAlbum } from "./stores/RandomStore";
+import { ITrackAlbum } from "../../stores/RandomStore";
 import {
   Grid,
   List,
@@ -9,48 +9,57 @@ import {
 } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import ComposersStore from "./stores/ComposersStore";
+import ComposersStore from "../../stores/ComposersStore";
 import { Observer } from "mobx-react";
 import { Play } from "material-ui-player/dist/icons";
 import Image from "mui-image";
-import IconPlaying from "./IconPlaying";
-import AudioCard from "./player/components/AudioCard";
+import IconPlaying from "../../IconPlaying";
+// import AudioCard from "./player/components/AudioCard";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { blueGrey, green, purple } from "@mui/material/colors";
-import { MARGIN_LEFT } from "./util/constants";
-import { WIDTH } from "./pages/composer/ComposerOneTemplate";
+import { MARGIN_LEFT } from "../../util/constants";
+import { WIDTH } from "../../pages/composer/ComposerOneTemplate";
+import { IAlbum } from "./AlbumsStore";
+import AlbumTracksStore from "../../stores/AlbumTracksStore";
+import { useAlbumsStore } from "../../index";
 // import * from "deezer-sdk";
 
 export interface IAlbumTracksProps {
-  store: ComposersStore;
-  tracks: ITrackAlbum[];
+  idAlbum: number;
 }
-
-// const DZ = window.DZ;
 
 const AlbumTracks = (props: IAlbumTracksProps) => {
   let lastComposer: string = "";
   let lastObra: string = "";
+  const store = new AlbumTracksStore();
+  store.getAlbum(props.idAlbum);
+
+  const getCurrentTrack = (): number => {
+    return store.getActiveIdTrack();
+  };
+
   return (
     <Observer>
       {() => (
         <>
           <Grid container>
-            <Grid item lg={4}>
-              <Image
-                src={props.store.activeAlbum.urlCover}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  top: 0,
-                  position: "sticky",
-                  alignSelf: "flex-start",
-                }}
-              />
-            </Grid>
+            {
+              <Grid item lg={4}>
+                <Image
+                  src={store.activeAlbum?.AlbumUrlImage}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    top: 0,
+                    position: "sticky",
+                    alignSelf: "flex-start",
+                  }}
+                />
+              </Grid>
+            }
             <Grid item lg={8}>
               <List>
-                {props.tracks.map((t: ITrackAlbum) => {
+                {store?.activeAlbum?.tracks.map((t: ITrackAlbum) => {
                   let response = (
                     <>
                       {t.trackComposer !== lastComposer && (
@@ -67,18 +76,31 @@ const AlbumTracks = (props: IAlbumTracksProps) => {
                       )}
                       <ListItemButton
                         onClick={() => {
-                          props.store.setActiveTrack(t.idTrack);
-                          DZ.player.playTracks([
-                            props.store.activeIdTrack.toString(),
-                          ]);
+                          debugger;
+                          if (
+                            DZ.player.isPlaying() &&
+                            getCurrentTrack() === t.idTrack
+                          ) {
+                            DZ.player.pause();
+                            DZ.player.seek(0);
+                            store.setActiveIdTrack(-1);
+                          } else {
+                            store.setActiveIdTrack(t.idTrack);
+                            DZ.player.playTracks([
+                              store.getActiveIdTrack().toString(),
+                            ]);
+                            DZ.player.play();
+                          }
                         }}
                       >
-                        {props.store.activeIdTrack !== t.idTrack && (
+                        {store.getActiveIdTrack() !== t.idTrack && (
                           <div
                             style={{ display: "inline" }}
+                            /*
                             onClick={() => {
-                              props.store.setActiveTrack(t.idTrack);
+                              store.setActiveIdTrack(t.idTrack);
                             }}
+*/
                           >
                             <Play />
                             <Typography
@@ -89,7 +111,7 @@ const AlbumTracks = (props: IAlbumTracksProps) => {
                             </Typography>
                           </div>
                         )}
-                        {props.store.activeIdTrack === t.idTrack && (
+                        {store?.activeAlbumTrack?.idTrack === t.idTrack && (
                           <div style={{ display: "inline" }}>
                             <IconPlaying />
                             <Typography
@@ -130,7 +152,7 @@ const AlbumTracks = (props: IAlbumTracksProps) => {
                   left: 0,
                 }}
               >
-                <PlayBar store={props.store} />
+                <PlayBar />
               </div>
             </ThemeProvider>
           </Grid>
@@ -141,7 +163,7 @@ const AlbumTracks = (props: IAlbumTracksProps) => {
 };
 
 export interface IPlayBarProps {
-  store: ComposersStore;
+  store?: ComposersStore;
 }
 const PlayBar = (props: IPlayBarProps) => {
   const [isPlaying, setIsPlaying] = useState(false);

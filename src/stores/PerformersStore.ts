@@ -1,8 +1,10 @@
 import { computed, makeAutoObservable, reaction } from "mobx";
-import axios from "axios";
-import { WEB_API_HOST } from "../util/constants";
+import axios, { AxiosResponse } from "axios";
 import { IComposer } from "../interfaces";
+import { HOST_WEB_API, ITrackAlbum } from "./RandomStore";
+import { IAlbum } from "../components/albums/AlbumsStore";
 // import { usePerformersStore } from "../index";
+
 export interface IPlayerRol {
   id: number;
   name: string;
@@ -13,16 +15,20 @@ export interface IPlayerRol {
 }
 export interface IPlayer {
   id: number;
+  idMN: string;
   idRol: number;
   name: string;
   nacionality: string;
   imatgeUrl: string;
+  imatgeBase64Large: string;
+  quantsAlbums: number;
+  bio: string;
 }
 
 export default class PerformersStore {
   constructor() {
     makeAutoObservable(this);
-    const urlRol = WEB_API_HOST + "api/PlayerRol";
+    const urlRol = HOST_WEB_API + "/PlayerRol";
     debugger;
     axios.get<IPlayerRol[]>(urlRol).then((response) => {
       debugger;
@@ -33,9 +39,9 @@ export default class PerformersStore {
     reaction(
       () => this.activeRol,
       (c: IPlayerRol) => {
-        //const urlRol = WEB_API_HOST + "api/TPlayer?idRol=" + c.id;
+        //const urlRol = HOST_WEB_API + "/TPlayer?idRol=" + c.id;
         debugger;
-        const urlRol = WEB_API_HOST + "api/TPlayer?idRol=" + c.id;
+        const urlRol = HOST_WEB_API + "/TPlayer?idRol=" + c.id;
         this.performers = [];
         axios.get<IPlayer[]>(urlRol).then((response) => {
           debugger;
@@ -51,9 +57,15 @@ export default class PerformersStore {
   }
 */
 
+  performerAct: IPlayer;
+
+  activeAlbumTracks: ITrackAlbum[] = [];
+
   performers: IPlayer[] = [];
   rols: IPlayerRol[] = [];
   activeRol: IPlayerRol;
+
+  activePerformer: IPlayer;
 
   setActiveRolById = (idRol: number) => {
     this.activeRol = this.rols.find((r) => r.id === idRol);
@@ -64,8 +76,28 @@ export default class PerformersStore {
       this.rols[this.rols.findIndex((rol) => rol.id === this.activeRol.id) + 1];
   };
 
-  setActiveRolPrev = () => {
-    this.activeRol =
-      this.rols[this.rols.findIndex((rol) => rol.id === this.activeRol.id) - 1];
+  getAlbumTracks = (idAlbum: number): Promise<void | ITrackAlbum[]> => {
+    const url = HOST_WEB_API + "/Tracks?idAlbum=" + idAlbum;
+    return axios.get<ITrackAlbum[]>(url).then((r) => {
+      this.activeAlbumTracks = r.data;
+    });
+  };
+
+  public setActivePerformerByIdMN = (idMN: string) => {
+    const performer = this.performers.find((f) => f.idMN === idMN);
+    this.performerAct = performer;
+  };
+
+  setActivePerformerById = (id: number) => {
+    this.activePerformer = this.performers.find((r) => r.id === id);
+  };
+
+  albumsPerformer: IAlbum[];
+
+  getAlbumsByPerformer = (id: number) => {
+    const url = HOST_WEB_API + "/AlbumsByPerformer?idPlayer=" + id;
+    axios.get<IAlbum[]>(url).then((response) => {
+      this.albumsPerformer = response.data;
+    });
   };
 }

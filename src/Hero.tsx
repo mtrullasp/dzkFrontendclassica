@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 // import ComposersStore, { getNomCognoms } from "./stores/ComposersStore";
-import ImageComposerOne from "./ImageComposerOne";
+import ImageComposerOne from "./pages/composer/ImageComposerOne";
 // import SearchIcon from "@mui/icons-material/Search";
 import { LayoutContainer } from "./layout/LayoutSantGrial";
 import { Typography, Grid } from "@mui/material";
@@ -32,6 +32,7 @@ import MenuButtonGroup, { IMenuItem } from "./MenuButtonGroup";
 //import MenuComposerOrPerformers from "./MenuComposerOrPerformers";
 import { MainHeader } from "./App";
 import ComposersStore from "./stores/ComposersStore";
+import A from "./components/A";
 //import MyObserver from "./components/MyObserver";
 // import Login from "./Login";
 
@@ -211,10 +212,11 @@ const HeroRigth = () => {
 const HeroContent = () => {
   const store = useComposerstore();
   store.composerAct = getRandom(store);
+  const navigate = useNavigate();
   debugger;
   return (
     <Observer>
-      {() => (
+      {(): JSX.Element => (
         <Grid
           item
           lg={4}
@@ -242,7 +244,15 @@ const HeroContent = () => {
                 variant={"h5"}
               >
                 <b>
-                  <big>{store.composerAct?.Nom}</big>
+                  <A
+                    content={<big>{store.composerAct?.Nom}</big>}
+                    onClick={(e: React.MouseEvent<HTMLElement>) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      store.setActiveComposerByIdMN(store.composerAct.idMN);
+                      navigate("ComposerOne/" + store.composerAct.idMN);
+                    }}
+                  />
                 </b>
                 <br />
                 <small>

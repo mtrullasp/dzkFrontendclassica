@@ -50,7 +50,7 @@ const ComposersList = (props: IComponentListProps) => {
                 <Flipped key={c.idMN} flipId={c.idMN}>
                   <ImageListItem
                     className="composer-list"
-                    style={{ fontSize: 40, padding: 0 }}
+                    style={{ fontSize: 40, padding: 0, display: "inline-block" }}
                     key={c.idMN}
                     onClick={() => {
                       props.onSelectComposer(c);

@@ -121,7 +121,7 @@ export interface IAlbum {
   nb_works: number;
   releaseDate: Date;
   composers: string;
-  // mainArtist: string;
+  tracks: Array<IAlbumTrack>;
 }
 
 export interface IPlayListTrack {

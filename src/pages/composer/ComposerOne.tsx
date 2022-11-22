@@ -1,6 +1,6 @@
 import React from "react";
 import { IComposer } from "../../interfaces";
-import ImageComposerOne from "../../ImageComposerOne";
+import ImageComposerOne from "./ImageComposerOne";
 import { Grid } from "@mui/material";
 import parse from "html-react-parser";
 import HyperText from "../../HyperText";
@@ -46,13 +46,14 @@ const ComposerOne = (props: ComposerOneProps) => {
               text={
                 <div
                   style={{
-                    marginRight: 50,
-                    marginTop: -5,
+                    marginRight: 10,
+                    marginLeft: 20,
+                    marginTop: 0,
                     fontSize: 18,
                     textAlign: "left",
                   }}
                 >
-                  {parse(store.composerAct?.biographpy + "")}
+                  {parse(store.composerAct?.bio + "")}
                 </div>
               }
             />

@@ -6,7 +6,7 @@ import {
   ImageListItemBar,
   Typography,
 } from "@mui/material";
-import { IAlbum } from "../AlbumsStore";
+import { IAlbum } from "./albums/AlbumsStore";
 import { LayoutContainer } from "../layout/LayoutSantGrial";
 import { MainHeader } from "../App";
 import { toJS } from "mobx";
